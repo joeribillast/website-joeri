@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Joeri Billast - The Future CMO logo</title>
+  <desc id="desc">Transparent vector wordmark with rocket, globe, Joeri Billast text and The Future CMO tagline.</desc>
+  <defs>
+    <linearGradient id="rocketBody" x1="260" y1="170" x2="480" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#b58cff"/>
+      <stop offset="1" stop-color="#6f43e8"/>
+    </linearGradient>
+    <linearGradient id="blueFlame" x1="80" y1="580" x2="295" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6848ff"/>
+      <stop offset="0.55" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#5ee7ff"/>
+    </linearGradient>
+    <linearGradient id="pinkFlame" x1="90" y1="615" x2="350" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d48ff"/>
+      <stop offset="0.56" stop-color="#ff6a8a"/>
+      <stop offset="1" stop-color="#ff8fa3"/>
+    </linearGradient>
+    <linearGradient id="purpleStroke" x1="100" y1="170" x2="510" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#160b33" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Icon group -->
+  <g id="icon" transform="translate(70 100)" filter="url(#softShadow)">
+    <!-- Globe -->
+    <g fill="none" stroke="url(#purpleStroke)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+      <path d="M92 215 A155 155 0 0 1 305 70"/>
+      <path d="M86 215 A155 155 0 0 0 248 382"/>
+      <path d="M125 99 C205 140 255 215 263 319"/>
+      <path d="M239 74 C178 139 143 224 139 318"/>
+      <path d="M87 206 C143 175 221 161 302 170"/>
+      <path d="M122 293 C185 282 250 294 301 327"/>
+    </g>
+
+    <!-- Speed / flame trails -->
+    <path d="M-42 515 L222 280 L259 300 L36 543 Z" fill="url(#blueFlame)"/>
+    <path d="M13 528 L274 326 L314 356 L91 552 Z" fill="url(#pinkFlame)"/>
+    <path d="M-4 571 L294 331 L253 315 L-55 607 Z" fill="#4f2bd6" opacity="0.85"/>
+
+    <!-- Rocket body -->
+    <path d="M194 260 C257 150 345 86 427 52 C416 139 360 239 263 314 C236 335 208 352 176 366 C185 331 188 297 194 260 Z" fill="url(#rocketBody)" stroke="#26164f" stroke-width="4"/>
+    <path d="M306 133 C351 96 391 68 427 52 C421 97 407 145 383 192 C363 176 337 156 306 133 Z" fill="#7c4dff" opacity="0.9"/>
+    <circle cx="344" cy="147" r="23" fill="#241449"/>
+    <circle cx="344" cy="147" r="12" fill="#9b7cff"/>
+
+    <!-- Fins -->
+    <path d="M196 304 L124 368 L214 352 Z" fill="#5ee7ff" stroke="#26164f" stroke-width="4"/>
+    <path d="M253 316 L241 430 L319 358 Z" fill="#ff668d" stroke="#26164f" stroke-width="4"/>
+    <path d="M168 373 L255 342 L220 395 L139 405 Z" fill="#251248"/>
+
+    <!-- Launch cutout -->
+    <path d="M165 240 C214 169 270 119 328 88" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.98"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g id="wordmark" transform="translate(570 194)">
+    <text x="0" y="115" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="112" font-weight="900" letter-spacing="4" fill="#ffffff">JOERI</text>
+    <text x="0" y="255" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="112" font-weight="900" letter-spacing="4" fill="#ffffff">BILLAST</text>
+    <text x="0" y="350" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="65" font-weight="700" letter-spacing="1" fill="#8b5cf6">The Future CMO</text>
+  </g>
+</svg>
