@@ -1,0 +1,202 @@
+/* =========================================================
+   Joeri Billast — Design System Tokens
+   Authoritative source: CLAUDE.md
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Source+Code+Pro:wght@500&display=swap');
+
+:root {
+  /* ---------- Neutrals ---------- */
+  --color-heading:        #111118;
+  --color-label:          #2c2c35;
+  --color-body:           #6b7280;
+  --color-muted:          #9ca3af;
+  --color-border:         #e8e8ed;
+  --color-border-light:   #f0f0f5;
+  --color-surface:        #f5f5f7;
+  --color-off-white:      #fafafa;
+  --color-white:          #ffffff;
+
+  /* ---------- Brand Purple (single accent) ---------- */
+  --color-purple:         #5b3fcf;
+  --color-purple-hover:   #4a32b0;
+  --color-purple-active:  #3d2899;
+  --color-purple-light:   #ede9fc;
+  --color-purple-border:  #c4b8f5;
+  --color-purple-muted:   #9b8ed4;
+  --color-brand-dark:     #2d1b69;
+  --color-wordmark-name:  #1e1654;
+  --color-wordmark-tag:   #7b5ea7;
+
+  /* ---------- System States ---------- */
+  --color-success:        #16a34a;
+  --color-success-bg:     #f0fdf4;
+  --color-success-border: #bbf7d0;
+  --color-error:          #dc2626;
+  --color-error-bg:       #fef2f2;
+  --color-error-border:   #fecaca;
+
+  /* ---------- Typography ---------- */
+  --font-primary: 'DM Sans', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --font-mono:    'Source Code Pro', 'SFMono-Regular', monospace;
+
+  /* ---------- Shadows (neutral only) ---------- */
+  --shadow-0: none;
+  --shadow-1: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-2: 0 4px 6px -1px rgba(0,0,0,.07), 0 2px 4px -1px rgba(0,0,0,.04);
+  --shadow-3: 0 10px 30px -8px rgba(0,0,0,.12), 0 4px 8px -2px rgba(0,0,0,.06);
+  --shadow-4: 0 20px 48px -12px rgba(0,0,0,.18), 0 8px 16px -4px rgba(0,0,0,.08);
+  --shadow-focus: 0 0 0 3px rgba(91,63,207,.18);
+
+  /* ---------- Radius ---------- */
+  --radius-micro:        2px;
+  --radius-standard:     6px;
+  --radius-comfortable:  8px;
+  --radius-relaxed:      10px;
+  --radius-large:        14px;
+
+  /* ---------- Layout ---------- */
+  --max-content: 1080px;
+  --max-reading: 640px;
+  --pad-x-desktop: 48px;
+  --pad-x-mobile:  24px;
+  --pad-section:   96px;
+  --pad-hero:      120px;
+  --nav-height:    64px;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-feature-settings: "ss01";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-body);
+  background: var(--color-white);
+}
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+h1, h2, h3, h4 {
+  color: var(--color-heading);
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.t-hero  { font-size: 3.5rem;   line-height: 1.04; letter-spacing: -1.5px; }
+.t-h1    { font-size: 3rem;     line-height: 1.10; letter-spacing: -1.0px; }
+.t-h2    { font-size: 2rem;     line-height: 1.15; letter-spacing: -0.6px; }
+.t-h3    { font-size: 1.625rem; line-height: 1.20; letter-spacing: -0.3px; }
+.t-h4    { font-size: 1.375rem; line-height: 1.25; letter-spacing: -0.2px; }
+
+.t-lead  { font-size: 1.25rem;  line-height: 1.55; color: var(--color-label); font-weight: 300; }
+.t-body  { font-size: 1rem;     line-height: 1.65; color: var(--color-body); }
+.t-body-lg { font-size: 1.125rem; line-height: 1.65; color: var(--color-body); }
+
+.t-eyebrow {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+a {
+  color: var(--color-purple);
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+a:hover { color: var(--color-purple-hover); }
+
+p { margin: 0 0 1.25em; }
+p:last-child { margin-bottom: 0; }
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 22px;
+  border-radius: var(--radius-standard);
+  font-family: var(--font-primary);
+  font-size: 15px; font-weight: 400; line-height: 1;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out;
+  text-decoration: none;
+}
+
+.btn--primary,
+.btn--primary:link,
+.btn--primary:visited {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+.btn--primary:hover {
+  background: var(--color-purple-hover);
+  color: var(--color-white);
+}
+.btn--primary:active {
+  background: var(--color-purple-active);
+  color: var(--color-white);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-purple);
+  border-color: var(--color-purple-border);
+}
+.btn--ghost:hover { background: var(--color-purple-light); color: var(--color-purple-hover); }
+
+.btn--ghost-dark {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.90);
+  border-color: rgba(255,255,255,0.18);
+}
+.btn--ghost-dark:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+.btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+
+/* =========================================================
+   Layout primitives
+   ========================================================= */
+
+.container {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding-left: var(--pad-x-desktop);
+  padding-right: var(--pad-x-desktop);
+}
+
+.reading {
+  max-width: var(--max-reading);
+}
+
+.section { padding-top: var(--pad-section); padding-bottom: var(--pad-section); }
+.section--hero { padding-top: var(--pad-hero); padding-bottom: var(--pad-hero); }
+.section--alt  { background: var(--color-off-white); }
+.section--dark {
+  background: var(--color-brand-dark);
+  color: rgba(255,255,255,0.70);
+}
+.section--dark h1, .section--dark h2, .section--dark h3 { color: #fff; }
+.section--dark .t-eyebrow { color: rgba(255,255,255,0.55); }
+
+@media (max-width: 720px) {
+  .container { padding-left: var(--pad-x-mobile); padding-right: var(--pad-x-mobile); }
+  .section { padding-top: 72px; padding-bottom: 72px; }
+  .section--hero { padding-top: 96px; padding-bottom: 96px; }
+  .t-hero { font-size: 2.5rem; letter-spacing: -1px; }
+  .t-h2 { font-size: 1.75rem; }
+}
