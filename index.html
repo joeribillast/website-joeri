@@ -149,8 +149,30 @@
   }
   .hero__support {
     max-width: 680px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     color: var(--color-body);
+  }
+  .hero__quote {
+    margin: 0 0 28px;
+    padding: 4px 0 4px 18px;
+    border-left: 2px solid var(--color-purple);
+    max-width: 640px;
+  }
+  .hero__quote p {
+    margin: 0 0 10px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-label);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+  .hero__quote cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-muted);
   }
   .hero__ctas {
     display: flex; gap: 12px; flex-wrap: wrap;
@@ -217,6 +239,27 @@
     transition: transform 160ms ease-out;
   }
   .cred__link:hover::after { transform: translateX(2px); }
+  .cred__pullquote {
+    margin: 16px 0 18px;
+    padding: 0;
+    border: none;
+  }
+  .cred__pullquote p {
+    margin: 0 0 6px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-label);
+  }
+  .cred__pullquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-muted);
+  }
 
   /* CTA dark */
   .cta-dark { text-align: left; }
@@ -245,6 +288,73 @@
     color: var(--color-body);
     font-size: 1rem;
     line-height: 1.7;
+  }
+
+  /* Reusable arrow link (matches cred__link visual treatment) */
+  .arrow-link {
+    display: inline-block;
+    margin-top: 28px;
+    font-size: 14px; font-weight: 400;
+    color: var(--color-purple);
+    text-decoration: none;
+    transition: color 160ms ease-out;
+  }
+  .arrow-link:hover { color: var(--color-purple-hover); }
+  .arrow-link::after {
+    content: " \2192";
+    display: inline-block;
+    margin-left: 4px;
+    transition: transform 160ms ease-out;
+  }
+  .arrow-link:hover::after { transform: translateX(2px); }
+
+  /* Speaking list */
+  .speaking-list {
+    list-style: none; margin: 32px 0 0; padding: 0;
+    border-top: 1px solid var(--color-border);
+    max-width: 760px;
+  }
+  .speaking-list li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 22px 0;
+    font-size: 1.0625rem;
+    color: var(--color-label);
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
+  }
+  .speaking__year {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    flex: 0 0 auto;
+  }
+
+  /* Recent perspectives */
+  .perspectives-list {
+    margin-top: 32px;
+    max-width: 760px;
+    border-top: 1px solid var(--color-border);
+  }
+  .perspectives-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 28px 0;
+  }
+  .perspectives-item h3 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color-heading);
+    margin: 0 0 8px;
+    letter-spacing: -0.2px;
+    line-height: 1.3;
+  }
+  .perspectives-item p {
+    margin: 0 0 14px;
+    color: var(--color-body);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .perspectives-item .arrow-link {
+    margin-top: 0;
   }
 
   /* Footer */
@@ -332,8 +442,16 @@
       "url": "https://www.amazon.com/author/joeribillast",
       "review": {
         "@type": "Review",
-        "author": { "@type": "Person", "name": "Philip Kotler" },
-        "reviewBody": "Endorsed by Philip Kotler."
+        "author": {
+          "@type": "Person",
+          "name": "Philip Kotler",
+          "jobTitle": "S.C. Johnson & Son Distinguished Professor of International Marketing",
+          "affiliation": {
+            "@type": "EducationalOrganization",
+            "name": "Kellogg School of Management"
+          }
+        },
+        "reviewBody": "The best update that I have read on the role and work of CMOs. A must-read for leaders ready to embrace financial accountability."
       }
     },
     {
@@ -394,7 +512,7 @@
   <header class="nav" role="banner">
     <div class="nav__inner">
       <a href="/" class="wordmark" aria-label="Joeri Billast, The Future CMO">
-     <img src="/assets/joeri-icon-transparent.png" alt="Joeri Billast logo" class="wordmark__icon" width="32" height="32" loading="eager" decoding="async">
+        <img src="assets/joeri-icon-transparent.png" alt="" class="wordmark__icon" width="32" height="32" loading="eager" decoding="async">
         <span class="wordmark__text">
           <span class="wordmark__name">JOERI BILLAST</span>
           <span class="wordmark__tag">The Future CMO</span>
@@ -402,11 +520,11 @@
       </a>
       <nav aria-label="Primary">
         <ul class="nav__links">
-          <li><a href="#positioning">What he does</a></li>
+          <li><a href="#positioning">What I do</a></li>
           <li><a href="#perspective">Perspective</a></li>
           <li><a href="#credentials">Credentials</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li class="nav__cta"><a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a></li>
+          <li class="nav__cta"><a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost" target="_blank" rel="noopener">Request an introduction</a></li>
         </ul>
       </nav>
     </div>
@@ -435,16 +553,21 @@
           </h1>
 
           <p class="t-lead hero__lede">
-            Joeri Billast is a Belgium-born, Portugal-based Fractional CMO, AI Visibility Strategist, and author of <em>The Future CMO</em>. He advises founders and executive teams on marketing leadership, brand positioning, and visibility in AI-driven markets.
+            I am a Belgium-born, Portugal-based Fractional CMO, AI Visibility Strategist, and author of <em>The Future CMO</em>. I advise founders and executive teams on marketing leadership, brand positioning, and visibility in AI-driven markets.
           </p>
 
           <p class="t-body-lg hero__support">
-            He helps companies become discoverable, accurately represented, and recommended by both customers and the AI systems that increasingly mediate them: ChatGPT, Perplexity, Claude, and Google's generative search.
+            I help companies become discoverable, accurately represented, and recommended by both customers and the AI systems that increasingly mediate them: ChatGPT, Perplexity, Claude, and Google's generative search.
           </p>
+
+          <blockquote class="hero__quote">
+            <p>The best update that I have read on the role and work of CMOs. A must-read for leaders ready to embrace financial accountability.</p>
+            <cite>Philip Kotler, S.C. Johnson &amp; Son Distinguished Professor of International Marketing, Kellogg School of Management</cite>
+          </blockquote>
 
           <div class="hero__ctas">
             <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a>
-            <a href="https://webdrie.net" class="btn btn--ghost" target="_blank" rel="noopener">Explore his work on webdrie.net</a>
+            <a href="#perspectives" class="btn btn--ghost">Read recent writing</a>
           </div>
         </div>
       </div>
@@ -453,14 +576,14 @@
     <!-- ===================== 2. POSITIONING ===================== -->
     <section id="positioning" class="section section--alt" aria-labelledby="positioning-title">
       <div class="section__inner">
-        <div class="eyebrow-row"><span class="t-eyebrow">What he does</span></div>
+        <div class="eyebrow-row"><span class="t-eyebrow">What I do</span></div>
         <h2 id="positioning-title" class="t-h2">A senior marketing partner for companies that take their long-term position seriously.</h2>
         <div class="reading">
           <p class="t-body-lg">
-            Joeri Billast operates at the intersection of marketing strategy and AI-driven discovery. As a Fractional CMO, he works with founders and leadership teams to build marketing functions that scale. As an AI Visibility Strategist, he ensures brands are recognized, cited, and recommended by large language models.
+            I operate at the intersection of marketing strategy and AI-driven discovery. As a Fractional CMO, I work with founders and leadership teams to build marketing functions that scale. As an AI Visibility Strategist, I ensure brands are recognized, cited, and recommended by large language models.
           </p>
           <p class="t-body-lg">
-            His work is selective rather than scaled. Clients are typically founder-led companies, scale-ups, and executive teams navigating a strategic transition into AI-mediated markets.
+            My work is selective rather than scaled. My clients are typically founder-led companies, scale-ups, and executive teams navigating a strategic transition into AI-mediated markets.
           </p>
         </div>
       </div>
@@ -470,7 +593,7 @@
     <section id="perspective" class="section" aria-labelledby="perspective-title">
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Perspective</span></div>
-        <h2 id="perspective-title" class="t-h2">A perspective on AI and marketing.</h2>
+        <h2 id="perspective-title" class="t-h2">My perspective on AI and marketing.</h2>
         <div class="reading">
           <p class="t-body-lg">
             The way customers find, evaluate, and choose brands is being rewritten. Search is no longer a list of links. It is an answer, generated in real time by a language model that decides which companies are worth mentioning.
@@ -498,6 +621,38 @@
       </div>
     </section>
 
+    <!-- ===================== SPEAKING ===================== -->
+    <section id="speaking" class="section section--alt" aria-labelledby="speaking-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Speaking</span></div>
+        <h2 id="speaking-title" class="t-h2">Recent stages.</h2>
+        <div class="reading">
+          <p class="t-body-lg">
+            I speak internationally on the future of marketing leadership, AI visibility, and what it takes for brands to stay legible in AI-mediated markets.
+          </p>
+        </div>
+        <ul class="speaking-list">
+          <li>
+            <span class="speaking__event">TEDxChiado, Lisbon</span>
+            <span class="speaking__year">2026</span>
+          </li>
+          <li>
+            <span class="speaking__event">DGT Innovation, Oeiras</span>
+            <span class="speaking__year">2025</span>
+          </li>
+          <li>
+            <span class="speaking__event">Marketing Plus, Cairo</span>
+            <span class="speaking__year">2024</span>
+          </li>
+          <li>
+            <span class="speaking__event">BAM Marketing Congress, Brussels</span>
+            <span class="speaking__year">2023</span>
+          </li>
+        </ul>
+        <a class="arrow-link" href="https://webdrie.net/the-cmo-of-the-future-marketing-speaker-joeri-billast/" target="_blank" rel="noopener">See full speaker page</a>
+      </div>
+    </section>
+
     <!-- ===================== 5. CREDENTIALS ===================== -->
     <section id="credentials" class="section" aria-labelledby="credentials-title">
       <div class="section__inner">
@@ -509,6 +664,10 @@
             <div class="cred__label">Book</div>
             <h3>The Future CMO</h3>
             <p>Author of <em>The Future CMO</em>, a book on marketing leadership in the age of artificial intelligence. The book carries an endorsement from Philip Kotler, widely regarded as the founding figure of modern marketing.</p>
+            <blockquote class="cred__pullquote">
+              <p>The best update that I have read on the role and work of CMOs.</p>
+              <cite>&mdash; Philip Kotler</cite>
+            </blockquote>
             <a class="cred__link" href="https://www.amazon.com/author/joeribillast" rel="noopener">View on Amazon</a>
           </article>
 
@@ -535,15 +694,45 @@
       </div>
     </section>
 
+    <!-- ===================== RECENT PERSPECTIVES ===================== -->
+    <section id="perspectives" class="section section--alt" aria-labelledby="perspectives-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Recent perspectives</span></div>
+        <h2 id="perspectives-title" class="t-h2">Recent writing.</h2>
+        <div class="reading">
+          <p class="t-body-lg">
+            A selection of recent essays on AI visibility, the changing role of the CMO, and what marketing leadership looks like in AI-mediated markets.
+          </p>
+        </div>
+        <div class="perspectives-list">
+          <article class="perspectives-item">
+            <h3>We're All in the Diaper Business Now</h3>
+            <p>Reflections from a fireside chat with Mark Schaefer at the Sintra Synergies Retreat on cognitive surrender, brand override, and why GEO alone won't save your brand.</p>
+            <a class="arrow-link" href="https://webdrie.net/were-all-in-the-diaper-business-now/" target="_blank" rel="noopener">Read article</a>
+          </article>
+          <article class="perspectives-item">
+            <h3>SEO, AI SEO, AEO, GEO, AIO: What Marketers Really Need to Know Now</h3>
+            <p>A working definition of the disciplines shaping AI-era visibility, and why winning brands optimize for both human audiences and machine intelligence.</p>
+            <a class="arrow-link" href="https://webdrie.net/seo-ai-seo-aeo-geo-aio-what-marketers-really-need-to-know-now/" target="_blank" rel="noopener">Read article</a>
+          </article>
+          <article class="perspectives-item">
+            <h3>Behind the Scenes of a TEDx Talk: Why Most Messages Don't Land</h3>
+            <p>What preparing a TEDx talk reveals about clarity, messaging discipline, and why strong ideas don't need to sell.</p>
+            <a class="arrow-link" href="https://webdrie.net/behind-the-scenes-of-a-tedx-talk-and-why-most-messages-dont-land-s6-e16/" target="_blank" rel="noopener">Read article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== 6. CTA (DARK) ===================== -->
     <section id="contact" class="section section--dark cta-dark" aria-labelledby="cta-title">
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Work with Joeri</span></div>
-        <h2 id="cta-title" class="t-h2">Engagements are limited and selected with care.</h2>
+        <h2 id="cta-title" class="t-h2">I take on a small number of engagements and select each one with care.</h2>
         <p>For executive teams considering a strategic engagement, advisory partnership, or a keynote.</p>
         <div class="cta-dark__buttons">
           <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a>
-          <a href="https://webdrie.net" class="btn btn--ghost-dark" target="_blank" rel="noopener">Explore his work on webdrie.net</a>
+          <a href="https://sintrasynergies.com" class="btn btn--ghost-dark" target="_blank" rel="noopener">Explore Sintra Synergies</a>
         </div>
       </div>
     </section>
