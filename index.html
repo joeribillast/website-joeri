@@ -290,6 +290,72 @@
     line-height: 1.7;
   }
 
+  /* TEDx video embed (facade pattern: custom thumbnail loads iframe on click) */
+  .tedx-video {
+    margin-top: 40px;
+    max-width: 880px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-relaxed);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    background: var(--color-surface);
+    position: relative;
+  }
+  .tedx-video__play {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    font: inherit;
+  }
+  .tedx-video__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .tedx-video__icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76px; height: 76px;
+    background: rgba(17, 17, 24, 0.78);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 200ms ease-out, transform 200ms ease-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .tedx-video__icon svg {
+    width: 28px; height: 28px;
+    fill: #ffffff;
+    margin-left: 4px;
+  }
+  .tedx-video__play:hover .tedx-video__icon,
+  .tedx-video__play:focus-visible .tedx-video__icon {
+    background: var(--color-purple);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  .tedx-video__play:focus-visible {
+    outline: none;
+  }
+  .tedx-video__play:focus-visible .tedx-video__icon {
+    box-shadow: 0 0 0 4px rgba(91, 63, 207, 0.25);
+  }
+  .tedx-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
   /* Reusable arrow link (matches cred__link visual treatment) */
   .arrow-link {
     display: inline-block;
@@ -429,7 +495,8 @@
       "homeLocation": {
         "@type": "Place",
         "address": { "@type": "PostalAddress", "addressCountry": "PT" }
-      }
+      },
+      "subjectOf": { "@id": "https://joeribillast.com/#tedx-talk" }
     },
     {
       "@type": "Book",
@@ -488,6 +555,34 @@
         }
       },
       "organizer": { "@id": "https://joeribillast.com/#person" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://joeribillast.com/#tedx-talk",
+      "name": "Trust is the only thing AI cannot scale",
+      "description": "TEDxChiado talk by Joeri Billast on why trust is the scarce resource in the age of generative AI, and what marketing leaders should optimize for instead.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/rUFx4FMBU-Q/maxresdefault.jpg",
+      "uploadDate": "2026-05-11",
+      "contentUrl": "https://www.youtube.com/watch?v=rUFx4FMBU-Q",
+      "embedUrl": "https://www.youtube.com/embed/rUFx4FMBU-Q",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TEDxChiado"
+      },
+      "author": { "@id": "https://joeribillast.com/#person" },
+      "about": [
+        {"@type": "Thing", "name": "AI Visibility"},
+        {"@type": "Thing", "name": "Marketing Leadership"},
+        {"@type": "Thing", "name": "Brand Trust"}
+      ],
+      "mentions": [
+        {"@id": "https://joeribillast.com/#future-cmo-book"},
+        {"@type": "Organization", "name": "Edelman", "url": "https://www.edelman.com/trust"}
+      ],
+      "locationCreated": {
+        "@type": "Place",
+        "name": "Lisbon, Portugal"
+      }
     },
     {
       "@type": "FAQPage",
@@ -643,6 +738,32 @@
           <li>Podcast and content strategy as authority infrastructure</li>
           <li>Keynote speaking on the future of marketing</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===================== TEDX TALK ===================== -->
+    <section id="tedx" class="section" aria-labelledby="tedx-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow" style="text-transform: none;">TEDxChiado, May 2026</span></div>
+        <h2 id="tedx-title" class="t-h2">Trust is the only thing AI cannot scale.</h2>
+        <div class="reading">
+          <p class="t-body-lg">
+            Most marketers are still optimizing for reach. This talk is about what they should optimize for instead.
+          </p>
+        </div>
+        <div class="tedx-video" data-video-id="rUFx4FMBU-Q">
+          <button type="button" class="tedx-video__play" aria-label="Play TEDx talk: Trust is the only thing AI cannot scale">
+            <img
+              src="assets/TEDx%20thumbnail.jpg"
+              alt="Joeri Billast on the TEDxChiado stage"
+              class="tedx-video__thumb"
+              loading="lazy"
+              decoding="async">
+            <span class="tedx-video__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -815,5 +936,23 @@
     </div>
   </footer>
 
+<script>
+  // YouTube facade: replace the thumbnail with the real iframe on click.
+  document.querySelectorAll('.tedx-video').forEach(function (container) {
+    var btn = container.querySelector('.tedx-video__play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = container.dataset.videoId;
+      if (!id) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = btn.getAttribute('aria-label') || 'YouTube video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      container.replaceChild(iframe, btn);
+    });
+  });
+</script>
 </body>
 </html>
