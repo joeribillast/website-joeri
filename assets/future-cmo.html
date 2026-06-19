@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Future CMO: Why Trust Became the Only Moat AI Cannot Scale | Joeri Billast</title>
+<meta name="description" content="Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale. The thesis behind The Future CMO by Joeri Billast.">
+
+<meta name="author" content="Joeri Billast">
+<link rel="canonical" href="https://joeribillast.com/future-cmo">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Future CMO: Why Trust Became the Only Moat AI Cannot Scale">
+<meta property="og:description" content="Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale.">
+<meta property="og:url" content="https://joeribillast.com/future-cmo">
+<meta property="og:image" content="https://joeribillast.com/assets/billboard.jpg">
+<meta property="og:image:alt" content="Billboard in Cairo, December 2024, featuring Joeri Billast alongside Philip Kotler, PR Smith and Christian Sarkar">
+<meta property="article:author" content="Joeri Billast">
+<meta property="article:published_time" content="2026-06-19">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Future CMO: Why Trust Became the Only Moat AI Cannot Scale">
+<meta name="twitter:description" content="Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale.">
+<meta name="twitter:image" content="https://joeribillast.com/assets/billboard.jpg">
+
+<link rel="icon" type="image/jpeg" href="assets/Favikon.jpg">
+<link rel="apple-touch-icon" href="assets/Favikon.jpg">
+<link rel="stylesheet" href="colors_and_type.css">
+
+<style>
+  /* ---------- Nav (same pattern as homepage) ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    height: var(--nav-height);
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav__inner {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 var(--pad-x-desktop);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .wordmark {
+    display: inline-flex; align-items: center; gap: 12px;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .wordmark__icon {
+    display: block;
+    height: 32px; width: 32px;
+    object-fit: contain;
+    flex: 0 0 auto;
+  }
+  .wordmark__text { display: flex; flex-direction: column; line-height: 1; }
+  .wordmark__name {
+    font-size: 15px; font-weight: 500;
+    color: var(--color-wordmark-name);
+    letter-spacing: 0.02em;
+  }
+  .wordmark__tag {
+    font-size: 11px; font-weight: 400;
+    color: var(--color-wordmark-tag);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  .nav__links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .nav__links a {
+    font-size: 14px; font-weight: 400; color: var(--color-heading);
+    text-decoration: none;
+  }
+  .nav__links a:hover { color: var(--color-purple); }
+  .nav__cta { margin-left: 8px; }
+
+  @media (max-width: 720px) {
+    .nav__inner { padding: 0 var(--pad-x-mobile); }
+    .nav__links { display: none; }
+  }
+
+  /* ---------- Article hero ---------- */
+  .article-hero {
+    padding-top: 96px;
+    padding-bottom: 56px;
+  }
+  .article-hero__inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 var(--pad-x-desktop);
+  }
+  .article-hero__image {
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+    margin: 0 auto 40px;
+    border-radius: var(--radius-relaxed);
+    box-shadow: var(--shadow-2);
+    object-fit: cover;
+  }
+  .article-hero__meta {
+    font-size: 11px;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .article-hero__title {
+    font-size: 3rem;
+    line-height: 1.10;
+    font-weight: 300;
+    color: var(--color-heading);
+    letter-spacing: -1.0px;
+    margin: 0 0 28px;
+  }
+  .article-hero__lede {
+    font-size: 1.375rem;
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--color-label);
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+
+  /* ---------- Article body ---------- */
+  .article-body {
+    padding-bottom: 96px;
+  }
+  .article-body__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--pad-x-desktop);
+  }
+  .article-body h2 {
+    font-size: 1.75rem;
+    line-height: 1.20;
+    font-weight: 300;
+    color: var(--color-heading);
+    letter-spacing: -0.4px;
+    margin: 56px 0 20px;
+  }
+  .article-body h2:first-child { margin-top: 0; }
+  .article-body h3 {
+    font-size: 1.25rem;
+    line-height: 1.30;
+    font-weight: 400;
+    color: var(--color-heading);
+    margin: 40px 0 14px;
+    letter-spacing: -0.2px;
+  }
+  .article-body p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-body);
+    margin: 0 0 1.4em;
+  }
+  .article-body p:last-child { margin-bottom: 0; }
+  .article-body em { font-style: italic; }
+
+  /* ---------- TEDx video embed (facade) ---------- */
+  .tedx-video {
+    margin: 56px auto;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-relaxed);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    background: var(--color-surface);
+    position: relative;
+  }
+  .tedx-video__play {
+    display: block;
+    width: 100%; height: 100%;
+    padding: 0; margin: 0; border: 0;
+    background: none; cursor: pointer;
+    position: relative; font: inherit;
+  }
+  .tedx-video__thumb {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .tedx-video__icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76px; height: 76px;
+    background: rgba(17, 17, 24, 0.78);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 200ms ease-out, transform 200ms ease-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .tedx-video__icon svg {
+    width: 28px; height: 28px;
+    fill: #ffffff;
+    margin-left: 4px;
+  }
+  .tedx-video__play:hover .tedx-video__icon,
+  .tedx-video__play:focus-visible .tedx-video__icon {
+    background: var(--color-purple);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  .tedx-video__play:focus-visible { outline: none; }
+  .tedx-video__play:focus-visible .tedx-video__icon {
+    box-shadow: 0 0 0 4px rgba(91, 63, 207, 0.25);
+  }
+  .tedx-video iframe {
+    width: 100%; height: 100%;
+    border: 0; display: block;
+  }
+
+  /* ---------- FAQ section ---------- */
+  .section__inner {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    padding: 0 var(--pad-x-desktop);
+  }
+  @media (max-width: 720px) {
+    .section__inner { padding: 0 var(--pad-x-mobile); }
+    .article-hero__inner,
+    .article-body__inner { padding: 0 var(--pad-x-mobile); }
+    .article-hero { padding-top: 64px; padding-bottom: 40px; }
+    .article-hero__title { font-size: 2.25rem; letter-spacing: -0.6px; }
+    .article-hero__lede { font-size: 1.1875rem; }
+    .article-body h2 { font-size: 1.5rem; margin-top: 48px; }
+    .tedx-video { margin: 40px auto; }
+  }
+
+  .eyebrow-row { margin-bottom: 16px; }
+  .section h2 { margin-bottom: 24px; max-width: 760px; }
+
+  .faq-list {
+    max-width: 760px;
+    border-top: 1px solid var(--color-border);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 32px 0;
+  }
+  .faq-item h3 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color-heading);
+    margin-bottom: 14px;
+    letter-spacing: -0.2px;
+  }
+  .faq-item p {
+    margin: 0;
+    color: var(--color-body);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ---------- CTA dark ---------- */
+  .cta-dark { text-align: left; }
+  .cta-dark h2 { max-width: 720px; margin-bottom: 16px; }
+  .cta-dark p { color: rgba(255,255,255,0.65); max-width: 620px; margin-bottom: 36px; font-size: 1.0625rem; }
+  .cta-dark__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    background: var(--color-off-white);
+    border-top: 1px solid var(--color-border);
+    padding: 56px 0;
+  }
+  .footer__inner {
+    max-width: var(--max-content); margin: 0 auto;
+    padding: 0 var(--pad-x-desktop);
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .footer .wordmark__icon { height: 40px; width: 40px; }
+  .footer__links {
+    display: flex; gap: 28px; list-style: none; margin: 0; padding: 0;
+  }
+  .footer__links a { font-size: 14px; color: var(--color-label); }
+  .footer__links a:hover { color: var(--color-purple); }
+  .footer__copy { font-size: 13px; color: var(--color-muted); margin-top: 16px; width: 100%; }
+  @media (max-width: 720px) {
+    .footer__inner { padding: 0 var(--pad-x-mobile); }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://joeribillast.com/future-cmo#article",
+      "headline": "The Future CMO: Why Trust Became the Only Moat AI Cannot Scale",
+      "description": "Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale. The thesis behind The Future CMO by Joeri Billast.",
+      "author": { "@id": "https://joeribillast.com/#person" },
+      "about": [
+        { "@type": "Thing", "name": "Future CMO" },
+        { "@type": "Thing", "name": "Chief Value Officer" },
+        { "@type": "Thing", "name": "AI Visibility" },
+        { "@type": "Thing", "name": "Brand Trust" }
+      ],
+      "mentions": [
+        { "@id": "https://joeribillast.com/#future-cmo-book" },
+        { "@id": "https://joeribillast.com/#tedx-talk" },
+        { "@type": "Person", "name": "Philip Kotler" },
+        { "@type": "Person", "name": "Mark Schaefer" }
+      ],
+      "isPartOf": { "@id": "https://joeribillast.com/#website" },
+      "mainEntityOfPage": "https://joeribillast.com/future-cmo",
+      "image": "https://joeribillast.com/assets/billboard.jpg",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://joeribillast.com/#website",
+      "name": "Joeri Billast",
+      "url": "https://joeribillast.com",
+      "publisher": { "@id": "https://joeribillast.com/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://joeribillast.com/future-cmo#chief-value-officer",
+      "name": "Chief Value Officer",
+      "description": "A marketing leader accountable for the value a brand can earn and prove, who ties trust and community to financial outcomes and treats trust as a measurable business asset. The role applies the CEO's core value-creation logic to where a brand meets its market. It is what the traditional CMO evolves into as content becomes infinite and trust becomes the filter.",
+      "inDefinedTermSet": "https://joeribillast.com/future-cmo"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://joeribillast.com/future-cmo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Future CMO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Future CMO is a marketing leader who optimizes for trust, defensible positioning, and community rather than attention and output volume. The concept comes from the book The Future CMO by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Chief Value Officer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Chief Value Officer is the role the traditional CMO is evolving into. The Chief Value Officer is accountable for the value a brand can earn and prove, ties trust and community to financial outcomes, and treats trust as a measurable business asset rather than a soft virtue. It applies the CEO's core value-creation logic to the surface where a brand meets its market, which is why it is a reconstruction of the role and not just a new title. The term was developed by Joeri Billast and discussed with Philip Kotler on the Web3 CMO Stories podcast." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't AI scale trust?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AI can generate content, images, campaigns, and strategy documents, but trust is earned through repeated kept promises over time. AI amplifies whatever strategy and positioning a brand already has. It does not create trust where none exists, which is why trust becomes the differentiator when everything else is automated." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Joeri Billast?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Joeri Billast is a Fractional CMO and AI Visibility Strategist based in Sintra, Portugal, author of The Future CMO, host of the Web3 CMO Stories podcast, and a TEDxChiado speaker. He developed the Future CMO and Chief Value Officer frameworks." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make my brand citable by AI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "That is the operational counterpart to this strategic thesis. Joeri has written a separate pillar on how to make your brand citable by AI, covering entity SEO, schema, and the trust signals that determine whether AI tools recommend you." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" role="banner">
+    <div class="nav__inner">
+      <a href="/" class="wordmark" aria-label="Joeri Billast, The Future CMO">
+        <img src="assets/joeri-icon-transparent.png" alt="" class="wordmark__icon" width="32" height="32" loading="eager" decoding="async">
+        <span class="wordmark__text">
+          <span class="wordmark__name">JOERI BILLAST</span>
+          <span class="wordmark__tag">The Future CMO</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/#positioning">What I do</a></li>
+          <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/#credentials">Credentials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li class="nav__cta"><a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost" target="_blank" rel="noopener">Request an introduction</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== ARTICLE HERO ===================== -->
+    <header class="article-hero">
+      <div class="article-hero__inner">
+        <img
+          src="assets/billboard.jpg"
+          alt="Billboard in Cairo, December 2024, featuring Joeri Billast alongside Philip Kotler, PR Smith and Christian Sarkar"
+          class="article-hero__image"
+          width="1599" height="740"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high">
+        <div class="article-hero__meta">June 19, 2026 &middot; By Joeri Billast</div>
+        <h1 class="article-hero__title">The Future CMO: Why Trust Became the Only Moat AI Cannot Scale</h1>
+        <p class="article-hero__lede">Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale.</p>
+      </div>
+    </header>
+
+    <!-- ===================== ARTICLE BODY ===================== -->
+    <article class="article-body">
+      <div class="article-body__inner">
+
+        <h2>The billboard in Cairo</h2>
+        <p>In December 2024 my face was on a billboard in fifteen locations across Cairo, a city of 22 million people. Next to it was the face of Philip Kotler, the man who turned marketing into an academic discipline and whose textbook has been the standard in business schools since 1967. We were both speaking at the same conference. He joined by video. I was there in person.</p>
+        <p>I am not telling you this for the vanity of it. I am telling you because of what happened after. I asked Kotler to come on my podcast, <em>Web3 CMO Stories</em>, and he said yes. In that conversation he used a word that I have not been able to put down since. He did not say the marketing leadership role was evolving. He said it was undergoing a reconstruction. When the person who defined the discipline reaches for that word, you stop optimizing and you start asking what you missed.</p>
+        <p>I wrote the answer down over eight chapters. The book became <em>The Future CMO</em>. When it was finished I sent it to him. His reply was one sentence. He called it the best update he had read on the role and work of CMOs. I could not say that sentence out loud for two weeks, because if Kotler thinks the role needs an update, then collectively we have missed something fundamental.</p>
+        <p>This page is about what we missed, and what the future CMO does instead.</p>
+
+        <h2>The collapse nobody is pricing in</h2>
+        <p>Here is the uncomfortable part. AI did not just democratize marketing competence. It commoditized it.</p>
+        <p>Ten years ago there was a real gap between a good marketer and an average one. The good one wrote sharper copy, built better campaigns, found cleaner positioning. That craft was a moat. Today a junior with ChatGPT produces technically correct copy in five minutes, and so does a senior with the same tools. The gap between good and average has collapsed in about twelve months.</p>
+        <p>Most marketing leadership is still treating this as a tooling problem. Which prompts, which stack, how much to automate. Those are the wrong questions, because everyone is already working on them, and when everyone works on the same questions, differentiation disappears. The problem was never that AI makes humans useless. The problem is that AI makes sameness easy, and sameness is the enemy of trust.</p>
+        <p>This is not only my read. Lippincott's 2026 CMO Outlook, a global study of more than 500 marketing leaders, found that as marketers pour money into AI implementation they are quietly defunding the very foundations that determine how AI understands and surfaces a brand: web experience, thought leadership content, customer experience. They are automating output while starving the things that make a brand worth recommending. That is the gap this book closes.</p>
+
+        <h2>Why the moat moved from output to meaning</h2>
+        <p>The old agency moat was output. More posts, more campaigns, more channels, more speed. That worked when production was hard. Production is no longer the bottleneck. The bottleneck now is meaning.</p>
+        <p>Can your client say something that actually matters. Can their market recognize their point of view. Can a stranger verify their credibility before the first sales conversation. Those are not creative questions, they are business questions, and clients will not pay premium fees for output that a model can generate. They will pay for clarity, for judgment, and for trust.</p>
+        <p>So the new moat looks different from what most teams are still selling. It is a defensible point of view, trust signals a customer can verify, a community that compounds, and strategic judgment rather than volume.</p>
+
+        <h2>The three shifts of the future CMO</h2>
+        <p>I have structured this reconstruction into three shifts. Most teams are still stuck on the left side of each one.</p>
+
+        <h3>Shift one: from attention to trust</h3>
+        <p>For more than a decade marketing has been obsessed with attention. Reach, impressions, views, clicks. Attention still matters, but it is no longer the hard part. The hard part is what happens after. Do people believe you, stay, refer you, pay a premium, and defend you when something goes wrong. That is where the business value sits.</p>
+        <p>You can get attention and still have no trust. You can go viral and still not matter. And trust is now measurable. Trusted brands command roughly a 15 to 20 percent price premium over less trusted competitors, a range backed by BrandSpark's consumer trust research and echoed in Edelman's brand trust data. Customers who arrive through a referral, which is trust made visible, carry around 16 to 25 percent higher lifetime value than customers acquired through other channels, according to research from the Wharton School. And those referred customers are about four times more likely to refer others in turn, which is how trust compounds rather than just converts. Those are not marketing metrics. They are business metrics, and most marketing dashboards do not track a single one of them.</p>
+        <p>That is why I built the Trust ROI Calculator into the book. It turns trust from a vague virtue into a line your CFO can read. You map where trust signals appear across your touchpoints, measure trust through satisfaction, retention and referral velocity, calculate your pricing power against competitors, track how fast you recover from a reputation incident, and link all of it to revenue on the same dashboard the finance team already uses.</p>
+
+        <h3>Shift two: from content volume to point of view</h3>
+        <p>AI made it trivial to publish more. More posts, blogs, videos, newsletters. But publishing more is not a strategy, it is often just noise, and the market is already full of it. Mark Schaefer, who I interviewed on the podcast and who joined my Sintra Synergies retreat, puts it plainly: competence is ignorable, audacity cuts through.</p>
+        <p>A defensible point of view has three properties. It is specific, naming what is broken in your industry by name rather than in vague terms. It is defensible, backed by your own experience, data, or a pattern you have actually seen. And it is repeatable, showing up consistently across everything you publish.</p>
+        <p>Here is the test. If you swapped your competitors' logos onto your content, would it still feel like yours. For most marketers the honest answer is no, and that is the whole problem. If your brand has no point of view, AI will only help you say nothing faster.</p>
+        <p>When you do have a real point of view, something else happens. You stop attracting an audience and you start attracting a community. An audience listens, a community participates. An audience consumes, a community contributes. An audience gives you attention, a community gives you trust. That is why the book includes a Community Health Calculator built on four dimensions: participation rate, content quality index, member retention at 90 and 365 days, and the ratio of community driven to brand driven content.</p>
+
+        <h3>Shift three: from tool adoption to strategic leadership</h3>
+        <p>This is the most important shift, and the most misunderstood. There is a belief that using more AI tools automatically makes you more advanced. It does not. AI tools do not make you a better CMO. They expose whether you were one.</p>
+        <p>If your strategy is weak, AI scales weak strategy. If your positioning is generic, AI produces generic content faster. If your brand has no trust, AI will not manufacture it for you. AI does not fix a lack of leadership. It amplifies it.</p>
+        <p>That is why the role itself is changing. The brand guardian becomes a Chief Value Officer. The campaign manager becomes a community architect. The creative director becomes a trust architect. The tool operator becomes a strategic translator. These are not title changes. They are a re-conceptualization of what the role does. This is what Kotler meant by reconstruction.</p>
+
+        <h2>What a Chief Value Officer actually is</h2>
+        <p>A Chief Value Officer is a marketing leader who is accountable for the value a brand earns and can prove, not the attention it rents. Where the traditional CMO optimized for reach and output, the Chief Value Officer optimizes for trust, defensible positioning, and community, and ties those to financial outcomes the rest of the C-suite already respects. It is the role marketing leadership grows into when content becomes infinite and trust becomes the filter.</p>
+        <p>There is a deeper logic here that explains why this is a reconstruction and not a promotion. A CEO exists to create value for the organization as a whole. The Chief Value Officer applies that same logic to the part of the business where value is most visibly created and captured, which is the surface where a brand meets its market. That is why this is not an upgraded marketing title. It is a role whose core question, how do we create and prove value while using resources well, is the same question the CEO is accountable for. When you frame the role that way, it stops reporting to value and starts owning it.</p>
+
+        <h2>The four minute test: the AI Visibility Check</h2>
+        <p>Here is something you can run on yourself, a brand, or a client this week. Four questions.</p>
+        <p>First, is your brand citable by AI. When ChatGPT, Claude, or Perplexity answer questions in your category, does your name appear. Gartner predicts that by 2028 around 70 percent of B2B research will start with an AI tool rather than Google. If you are not citable there, you do not exist for those buyers. The operational side of this is its own discipline, and I have written the full playbook separately on <a href="/ai-visibility">how to make your brand citable by AI</a>.</p>
+        <p>Second, do you have a defensible point of view. Same logo test as before. If a competitor could swap their logo onto your content and it would still feel theirs, what you have is not a point of view, it is competent noise.</p>
+        <p>Third, can a stranger verify your trust signals in 30 seconds. Not three clicks deep on an About page. At the surface. Named clients, real testimonials, endorsements from people who matter.</p>
+        <p>Fourth, are you optimizing for trust or for attention. What gets celebrated internally, the viral post or the quiet client outcome that took six months. What you celebrate, you get more of.</p>
+        <p>Honest answers to those four questions give you a radically different priority list than the one most marketing teams are working from right now.</p>
+
+        <h2>Where this came from, and where it is going</h2>
+        <p>This thesis did not arrive fully formed. It was built across 300 conversations on <em>Web3 CMO Stories</em> with people like Gary Vaynerchuk, Chris Do and Joe Pulizzi, pressure tested on stage at TEDxChiado in March 2026 in a talk called <em>Why Trust Is the Only Thing AI Cannot Scale</em>, and argued live at NEXT.io in Valletta in a fireside chat titled <em>Is the CMO Dead. Long Live the Chief Value Officer</em>. The book gathered it into one place. The retreat, Sintra Synergies, is where senior marketers and agency owners work it through together.</p>
+
+        <div class="tedx-video" data-video-id="rUFx4FMBU-Q">
+          <button type="button" class="tedx-video__play" aria-label="Play TEDx talk: Trust is the only thing AI cannot scale">
+            <img
+              src="assets/TEDx%20thumbnail.jpg"
+              alt="Joeri Billast on the TEDxChiado stage"
+              class="tedx-video__thumb"
+              loading="lazy"
+              decoding="async">
+            <span class="tedx-video__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <p>The line I keep returning to is the one I closed the TEDx talk on. When content becomes infinite, trust becomes the filter. AI can scale almost everything. It can generate content, images, campaigns, even strategy documents. The one thing it cannot scale is the thing that makes a brand fundamentally valuable. Trust can only be earned, one interaction at a time, one promise kept at a time, one client at a time. That is the reconstruction Kotler meant. And that is the work of the future CMO.</p>
+      </div>
+    </article>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="section section--alt" aria-labelledby="faq-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Frequently asked</span></div>
+        <h2 id="faq-title" class="t-h2">Questions and definitions.</h2>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>What is the Future CMO?</h3>
+            <p>The Future CMO is a marketing leader who optimizes for trust, defensible positioning, and community rather than attention and output volume. The concept comes from the book <em>The Future CMO</em> by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>What is a Chief Value Officer?</h3>
+            <p>A Chief Value Officer is the role the traditional CMO is evolving into. The Chief Value Officer is accountable for the value a brand can earn and prove, ties trust and community to financial outcomes, and treats trust as a measurable business asset rather than a soft virtue. It applies the CEO's core value-creation logic to the surface where a brand meets its market, which is why it is a reconstruction of the role and not just a new title. The term was developed by Joeri Billast and discussed with Philip Kotler on the <em>Web3 CMO Stories</em> podcast.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Why can't AI scale trust?</h3>
+            <p>AI can generate content, images, campaigns, and strategy documents, but trust is earned through repeated kept promises over time. AI amplifies whatever strategy and positioning a brand already has. It does not create trust where none exists, which is why trust becomes the differentiator when everything else is automated.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Who is Joeri Billast?</h3>
+            <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist based in Sintra, Portugal, author of <em>The Future CMO</em>, host of the <em>Web3 CMO Stories</em> podcast, and a TEDxChiado speaker. He developed the Future CMO and Chief Value Officer frameworks.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How do I make my brand citable by AI?</h3>
+            <p>That is the operational counterpart to this strategic thesis. Joeri has written a separate pillar on <a href="/ai-visibility">how to make your brand citable by AI</a>, covering entity SEO, schema, and the trust signals that determine whether AI tools recommend you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA (DARK) ===================== -->
+    <section id="contact" class="section section--dark cta-dark" aria-labelledby="cta-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Work with Joeri</span></div>
+        <h2 id="cta-title" class="t-h2">If this thesis matches a problem you are working on, let's talk.</h2>
+        <p>For executive teams considering a strategic engagement, advisory partnership, or a keynote.</p>
+        <div class="cta-dark__buttons">
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a>
+          <a href="https://sintrasynergies.com" class="btn btn--ghost-dark" target="_blank" rel="noopener">Explore Sintra Synergies</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <a href="/" class="wordmark" aria-label="Joeri Billast, The Future CMO">
+        <img src="assets/joeri-icon-transparent.png" alt="" class="wordmark__icon" width="40" height="40" loading="lazy" decoding="async">
+        <span class="wordmark__text">
+          <span class="wordmark__name">JOERI BILLAST</span>
+          <span class="wordmark__tag">The Future CMO</span>
+        </span>
+      </a>
+      <ul class="footer__links">
+        <li><a href="https://www.linkedin.com/in/joeribillast/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.cmo-stories.com" rel="noopener">Podcast</a></li>
+        <li><a href="https://www.amazon.com/author/joeribillast" rel="noopener">Amazon author</a></li>
+        <li><a href="https://webdrie.net" rel="noopener">Webdrie</a></li>
+        <li><a href="https://myformflow.io/efficado/contact-joeri" target="_blank" rel="noopener">Contact</a></li>
+      </ul>
+      <div class="footer__copy">&copy; 2026 Joeri Billast. Belgium &middot; Portugal.</div>
+    </div>
+  </footer>
+
+<script>
+  // YouTube facade: replace the thumbnail with the real iframe on click.
+  document.querySelectorAll('.tedx-video').forEach(function (container) {
+    var btn = container.querySelector('.tedx-video__play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = container.dataset.videoId;
+      if (!id) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = btn.getAttribute('aria-label') || 'YouTube video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      container.replaceChild(iframe, btn);
+    });
+  });
+</script>
+</body>
+</html>
