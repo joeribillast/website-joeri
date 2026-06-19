@@ -165,6 +165,23 @@
   }
   .article-body p:last-child { margin-bottom: 0; }
   .article-body em { font-style: italic; }
+  .article-body__figure {
+    margin: 32px 0 36px;
+  }
+  .article-body__figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-relaxed);
+    box-shadow: var(--shadow-2);
+  }
+  .article-body__figure figcaption {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--color-muted);
+    font-style: italic;
+    text-align: left;
+  }
 
   /* ---------- TEDx video embed (facade) ---------- */
   .tedx-video {
@@ -315,7 +332,10 @@
       ],
       "isPartOf": { "@id": "https://joeribillast.com/#website" },
       "mainEntityOfPage": "https://joeribillast.com/future-cmo",
-      "image": "https://joeribillast.com/assets/billboard.jpg",
+      "image": [
+        "https://joeribillast.com/assets/billboard.jpg",
+        "https://joeribillast.com/assets/joeri-billast-philip-kotler.jpg"
+      ],
       "datePublished": "2026-06-19",
       "dateModified": "2026-06-19",
       "inLanguage": "en"
@@ -421,6 +441,17 @@
         <h2>The billboard in Cairo</h2>
         <p>In December 2024 my face was on a billboard in fifteen locations across Cairo, a city of 22 million people. Next to it was the face of Philip Kotler, the man who turned marketing into an academic discipline and whose textbook has been the standard in business schools since 1967. We were both speaking at the same conference. He joined by video. I was there in person.</p>
         <p>I am not telling you this for the vanity of it. I am telling you because of what happened after. I asked Kotler to come on my podcast, <em>Web3 CMO Stories</em>, and he said yes. In that conversation he used a word that I have not been able to put down since. He did not say the marketing leadership role was evolving. He said it was undergoing a reconstruction. When the person who defined the discipline reaches for that word, you stop optimizing and you start asking what you missed.</p>
+
+        <figure class="article-body__figure">
+          <img
+            src="assets/joeri-billast-philip-kotler.jpg"
+            alt="Joeri Billast and Philip Kotler during their Web3 CMO Stories podcast conversation"
+            width="1774" height="887"
+            loading="lazy"
+            decoding="async">
+          <figcaption>With Philip Kotler on Web3 CMO Stories</figcaption>
+        </figure>
+
         <p>I wrote the answer down over eight chapters. The book became <em>The Future CMO</em>. When it was finished I sent it to him. His reply was one sentence. He called it the best update he had read on the role and work of CMOs. I could not say that sentence out loud for two weeks, because if Kotler thinks the role needs an update, then collectively we have missed something fundamental.</p>
         <p>This page is about what we missed, and what the future CMO does instead.</p>
 
@@ -548,6 +579,8 @@
         </span>
       </a>
       <ul class="footer__links">
+        <li><a href="/future-cmo">The Future CMO</a></li>
+        <li><a href="/ai-visibility">AI Visibility</a></li>
         <li><a href="https://www.linkedin.com/in/joeribillast/" rel="noopener">LinkedIn</a></li>
         <li><a href="https://www.cmo-stories.com" rel="noopener">Podcast</a></li>
         <li><a href="https://www.amazon.com/author/joeribillast" rel="noopener">Amazon author</a></li>
