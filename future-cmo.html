@@ -83,8 +83,14 @@
 
   @media (max-width: 720px) {
     .nav__inner { padding: 0 var(--pad-x-mobile); }
-    .nav__links { display: none; }
+    /* Keep the availability action reachable on mobile; full nav lives in the footer. */
+    .nav__links > li:not(.nav__cta) { display: none; }
+    .nav__links { gap: 0; }
+    .nav__cta { margin-left: 0; }
+    .nav__cta .btn { padding: 8px 14px; font-size: 14px; }
   }
+
+  @media (max-width: 900px) { .nav__links { gap: 22px; } }
 
   /* ---------- Article hero ---------- */
   .article-hero {
@@ -407,6 +413,7 @@
         <ul class="nav__links">
           <li><a href="/#positioning">What I do</a></li>
           <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/speaking">Speaking</a></li>
           <li><a href="/#credentials">Credentials</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li class="nav__cta"><a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost" target="_blank" rel="noopener">Request an introduction</a></li>
@@ -581,6 +588,7 @@
       <ul class="footer__links">
         <li><a href="/future-cmo">The Future CMO</a></li>
         <li><a href="/ai-visibility">AI Visibility</a></li>
+        <li><a href="/speaking">Speaking</a></li>
         <li><a href="https://www.linkedin.com/in/joeribillast/" rel="noopener">LinkedIn</a></li>
         <li><a href="https://www.cmo-stories.com" rel="noopener">Podcast</a></li>
         <li><a href="https://www.amazon.com/author/joeribillast" rel="noopener">Amazon author</a></li>

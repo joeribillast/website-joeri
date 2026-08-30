@@ -1,6 +1,6 @@
 # Joeri Billast — Design System Reference
 
-> **For Claude Code / AI assistants:** This file defines the complete design system for Joeri Billast's personal brand website. Use it as the authoritative reference when building, refining, or generating any UI for this project.
+> **For Codex / AI assistants:** This file defines the complete design system for Joeri Billast's personal brand website. Use it as the authoritative reference when building, refining, or generating any UI for this project.
 
 ---
 
@@ -12,7 +12,7 @@
 | **Tagline** | The Future CMO |
 | **Role** | Fractional CMO · AI Visibility Strategist · Keynote Speaker |
 | **Tone** | Strategic advisor — calm, authoritative, forward-looking |
-| **Visual language** | Stripe / Apple / Claude — minimal, premium, type-driven |
+| **Visual language** | Stripe / Apple / Codex — minimal, premium, type-driven |
 
 ---
 
@@ -221,71 +221,6 @@ border: 1px solid rgba(255,255,255,0.08);
 border-radius: 8px;
 ```
 
-### Video Embed (facade)
-
-Never drop a live YouTube `<iframe>` into the page. Use the facade: a static poster with a
-play button that swaps itself for the iframe on click. Keeps LCP low and sets no third-party
-cookie before a deliberate click.
-
-```css
-.video-embed          /* 16:9, radius-relaxed, shadow-2, surface bg, max-width 880px */
-.video-embed__play    /* full-bleed button wrapper */
-.video-embed__thumb   /* poster image, object-fit: cover */
-.video-embed__icon    /* 76px circle, rgba(17,17,24,.78) → #5b3fcf on hover/focus */
-```
-
-```html
-<div class="video-embed" data-video-id="VIDEO_ID">
-  <button type="button" class="video-embed__play" aria-label="Play …">
-    <img src="assets/poster.jpg" alt="…" class="video-embed__thumb" loading="lazy" decoding="async">
-    <span class="video-embed__icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </span>
-  </button>
-</div>
-```
-
-Rules:
-- Iframe host is `youtube-nocookie.com`, never `youtube.com`
-- Poster lives in `assets/`, never hotlinked from `i.ytimg.com` in production
-- Poster uses the responsive image pattern below (WebP + JPEG, 800w and 1600w)
-- Every embed needs a matching `VideoObject` in the page's JSON-LD `@graph`
-- Add a text summary or transcript near the embed — language models do not watch video
-
-Transcripts go in a `<details class="transcript">` disclosure directly under the embed, with
-the same text repeated in the `VideoObject`'s `transcript` property. Native `<details>`,
-no JavaScript. Summary is 14px/400 purple with a chevron built from a rotated
-`::before` border; the marker is hidden with `list-style: none` plus
-`::-webkit-details-marker { display: none; }`.
-
-### Responsive Images
-
-Never load an original camera file inline. Export web versions into `assets/` at 800w and
-1600w in both WebP and JPEG, and serve them through `<picture>`:
-
-```html
-<picture>
-  <source srcset="assets/name-800.webp 800w, assets/name-1600.webp 1600w"
-          sizes="(max-width: 920px) 100vw, 880px" type="image/webp">
-  <img src="assets/name-1600.jpg"
-       srcset="assets/name-800.jpg 800w, assets/name-1600.jpg 1600w"
-       sizes="(max-width: 920px) 100vw, 880px"
-       width="1600" height="900" alt="…" loading="lazy" decoding="async">
-</picture>
-```
-
-Rules:
-- Always set `width` and `height` so the box is reserved before load (no layout shift)
-- `loading="lazy"` below the fold; `loading="eager" fetchpriority="high"` for the LCP image
-- Naming: `kebab-case-{width}.{ext}` — no spaces, no capitals
-- Originals stay in `assets/` for download links only, never as an inline `src`
-- Social preview per page: a dedicated 1200×630 JPEG, declared with
-  `og:image:width`, `og:image:height` and `og:image:alt`
-
-> **Pending:** `index.html` still uses the older `.tedx-video` class name for this same
-> component. Rename it to `.video-embed` (CSS, markup and the JS selector) so the component
-> has one name across the site.
-
 ### Form Inputs
 
 ```css
@@ -312,21 +247,6 @@ border-bottom: 1px solid #e8e8ed;
 font-size: 14px; font-weight: 400; color: #111118;
 active → color: #5b3fcf; border-bottom: 2px solid #5b3fcf;
 hover → color: #5b3fcf;
-```
-
-Nav items (all pages, same order): What I do · Perspective · Speaking · Credentials · [Request an introduction]
-
-Mobile (≤720px): hide the text links, keep the CTA. Never hide the whole `.nav__links`,
-that leaves the page with no reachable action. Full navigation stays available in the footer.
-
-```css
-@media (max-width: 900px) { .nav__links { gap: 22px; } }
-@media (max-width: 720px) {
-  .nav__links > li:not(.nav__cta) { display: none; }
-  .nav__links { gap: 0; }
-  .nav__cta { margin-left: 0; }
-  .nav__cta .btn { padding: 8px 14px; font-size: 14px; }
-}
 ```
 
 ### Dark Section
@@ -414,15 +334,6 @@ Home
   └── Dark Section (#2d1b69, 96px padding)
         2-column: headline/copy/CTAs + 3 capability cards
 
-/speaking → Speaker page (white → off-white alternating)
-      Hero: eyebrow · H1 premise · lede · [Check availability] [Watch my TEDx talk] ·
-            meta line · speaker reel (video embed facade)
-      Testimonials (3 organizer cards) → Signature keynote (premise · outcome ·
-      takeaways · endorsement · stage photo) → Full TEDx talk → Selected speaking and
-      moderation engagements (3 groups) → Formats (4 cards) → Practical booking
-      information (facts table) → Speaker kit (3 bios + photo downloads) →
-      Dark CTA → FAQ
-
 Work     → 2-col grid of project cards
 About    → 2-col: avatar/badge + bio/expertise badges
 Writing  → Single column list, row-per-post with hover indent
@@ -459,3 +370,5 @@ Or reference relative to file location.
 - ❌ Pill/rounded buttons (border-radius > 14px on buttons)
 - ❌ Dark section background `#1c1e54` — use `#2d1b69`
 - ❌ Emoji in the UI
+
+## Imported Claude Cowork project instructions

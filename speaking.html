@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Keynote Speaker on AI and Trust | Joeri Billast</title>
+<meta name="description" content="Joeri Billast is a TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditized competence. Trust is the only thing it cannot scale. Book Joeri for conferences, executive offsites and leadership events.">
+
+<meta name="author" content="Joeri Billast">
+<link rel="canonical" href="https://joeribillast.com/speaking">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Keynote Speaker on AI and Trust | Joeri Billast">
+<meta property="og:description" content="TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditized competence. Trust is the only thing it cannot scale.">
+<meta property="og:url" content="https://joeribillast.com/speaking">
+<meta property="og:image" content="https://joeribillast.com/assets/og-speaking.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Joeri Billast speaking on stage in New York with a microphone">
+<meta property="profile:first_name" content="Joeri">
+<meta property="profile:last_name" content="Billast">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keynote Speaker on AI and Trust | Joeri Billast">
+<meta name="twitter:description" content="TEDx and international keynote speaker on marketing leadership in the AI era.">
+<meta name="twitter:image" content="https://joeribillast.com/assets/og-speaking.jpg">
+<meta name="twitter:image:alt" content="Joeri Billast speaking on stage in New York with a microphone">
+
+<link rel="icon" type="image/jpeg" href="assets/Favikon.jpg">
+<link rel="apple-touch-icon" href="assets/Favikon.jpg">
+<link rel="stylesheet" href="colors_and_type.css">
+
+<style>
+  /* ---------- Page-specific layout ---------- */
+
+  body { background: var(--color-white); }
+
+  /* Nav (shared with index.html) */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    height: var(--nav-height);
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav__inner {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 var(--pad-x-desktop);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .wordmark {
+    display: inline-flex; align-items: center; gap: 12px;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .wordmark__icon {
+    display: block;
+    height: 32px; width: 32px;
+    object-fit: contain;
+    flex: 0 0 auto;
+  }
+  .wordmark__text { display: flex; flex-direction: column; line-height: 1; }
+  .wordmark__name {
+    font-size: 15px; font-weight: 500;
+    color: var(--color-wordmark-name);
+    letter-spacing: 0.02em;
+  }
+  .wordmark__tag {
+    font-size: 11px; font-weight: 400;
+    color: var(--color-wordmark-tag);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  .footer .wordmark__icon { height: 40px; width: 40px; }
+  .nav__links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .nav__links a {
+    font-size: 14px; font-weight: 400; color: var(--color-heading);
+    text-decoration: none;
+  }
+  .nav__links a:hover { color: var(--color-purple); }
+  .nav__links a[aria-current="page"] { color: var(--color-purple); }
+  .nav__cta { margin-left: 8px; }
+
+  @media (max-width: 900px) { .nav__links { gap: 22px; } }
+  @media (max-width: 720px) {
+    .nav__inner { padding: 0 var(--pad-x-mobile); }
+    /* Keep the availability action reachable on mobile; full nav lives in the footer. */
+    .nav__links > li:not(.nav__cta) { display: none; }
+    .nav__links { gap: 0; }
+    .nav__cta { margin-left: 0; }
+    .nav__cta .btn { padding: 8px 14px; font-size: 14px; }
+  }
+
+  /* Generic section content (shared with index.html) */
+  .section__inner { max-width: var(--max-content); margin: 0 auto; padding: 0 var(--pad-x-desktop); }
+  @media (max-width: 720px) {
+    .section__inner { padding: 0 var(--pad-x-mobile); }
+  }
+  .eyebrow-row { margin-bottom: 16px; }
+  .section h2 { margin-bottom: 24px; max-width: 820px; }
+  .section .reading p { color: var(--color-body); }
+
+  /* ---------- Speaker hero ---------- */
+  .speaker-hero h1 { margin-bottom: 28px; max-width: 900px; }
+  .speaker-hero__lede { max-width: 680px; margin-bottom: 28px; }
+  .speaker-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  .speaker-hero__meta {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin: 0 0 48px;
+  }
+  .speaker-hero__meta span + span::before {
+    content: "·";
+    margin: 0 10px;
+    color: var(--color-border);
+  }
+
+  /* ---------- Video embed (facade: poster loads the iframe on click) ---------- */
+  .video-embed {
+    max-width: 880px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-relaxed);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    background: var(--color-surface);
+    position: relative;
+  }
+  .video-embed__play {
+    display: block;
+    width: 100%; height: 100%;
+    padding: 0; margin: 0; border: 0;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    font: inherit;
+  }
+  .video-embed__thumb {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-embed__icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76px; height: 76px;
+    background: rgba(17, 17, 24, 0.78);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 200ms ease-out, transform 200ms ease-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .video-embed__icon svg {
+    width: 28px; height: 28px;
+    fill: #ffffff;
+    margin-left: 4px;
+  }
+  .video-embed__play:hover .video-embed__icon,
+  .video-embed__play:focus-visible .video-embed__icon {
+    background: var(--color-purple);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  .video-embed__play:focus-visible { outline: none; }
+  .video-embed__play:focus-visible .video-embed__icon {
+    box-shadow: 0 0 0 4px rgba(91, 63, 207, 0.25);
+  }
+  .video-embed iframe {
+    width: 100%; height: 100%;
+    border: 0;
+    display: block;
+  }
+  .video-caption {
+    max-width: 880px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+
+  /* ---------- Transcript disclosure ---------- */
+  .transcript {
+    max-width: 880px;
+    margin-top: 24px;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .transcript > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 0;
+    font-size: 14px; font-weight: 400;
+    color: var(--color-purple);
+    display: flex; align-items: center; gap: 10px;
+    transition: color 160ms ease-out;
+  }
+  .transcript > summary::-webkit-details-marker { display: none; }
+  .transcript > summary::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 7px; height: 7px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 160ms ease-out;
+  }
+  .transcript[open] > summary::before { transform: rotate(-135deg) translateY(-2px); }
+  .transcript > summary:hover { color: var(--color-purple-hover); }
+  .transcript > summary:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+    border-radius: var(--radius-standard);
+  }
+  .transcript__body { padding: 0 0 24px; max-width: 640px; }
+  .transcript__body p { color: var(--color-body); font-size: 1rem; line-height: 1.7; }
+  .transcript__body p + p { margin-top: 1em; }
+
+  /* ---------- Photography ---------- */
+  .stage-figure {
+    margin: 40px 0 0;
+    max-width: 880px;
+  }
+  .stage-figure img {
+    display: block;
+    width: 100%; height: auto;
+    border-radius: var(--radius-relaxed);
+    box-shadow: var(--shadow-2);
+  }
+  .stage-figure figcaption {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--color-muted);
+    max-width: 640px;
+  }
+
+  /* ---------- Prominent endorsement ---------- */
+  .endorsement {
+    margin: 48px 0 0;
+    padding: 32px 36px;
+    max-width: 820px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-purple);
+    border-radius: var(--radius-relaxed);
+    box-shadow: var(--shadow-2);
+  }
+  .endorsement p {
+    margin: 0 0 18px;
+    font-size: 1.625rem;
+    line-height: 1.3;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+    color: var(--color-heading);
+  }
+  .endorsement cite {
+    display: block;
+    font-style: normal;
+    font-size: 14px; font-weight: 400; line-height: 1.55;
+    color: var(--color-body);
+  }
+  .endorsement cite strong {
+    font-weight: 400;
+    color: var(--color-label);
+  }
+  @media (max-width: 720px) {
+    .endorsement { padding: 24px 22px; }
+    .endorsement p { font-size: 1.375rem; }
+  }
+
+  /* ---------- Keynote outcome ---------- */
+  .outcome {
+    margin: 32px 0 0;
+    padding: 24px 26px;
+    max-width: 820px;
+    background: var(--color-purple-light);
+    border: 1px solid var(--color-purple-border);
+    border-radius: var(--radius-relaxed);
+  }
+  .outcome__label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--color-purple-active);
+    margin-bottom: 10px;
+  }
+  .outcome p {
+    margin: 0;
+    font-size: 1.0625rem; font-weight: 300; line-height: 1.6;
+    color: var(--color-label);
+  }
+
+  /* ---------- Keynote takeaways ---------- */
+  .takeaways {
+    list-style: none; margin: 32px 0 0; padding: 0;
+    border-top: 1px solid var(--color-border);
+    max-width: 760px;
+  }
+  .takeaways li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 22px 0;
+    font-size: 1.0625rem;
+    color: var(--color-label);
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex; align-items: baseline; gap: 16px;
+  }
+  .takeaways li::before {
+    content: ""; flex: 0 0 6px; width: 6px; height: 6px;
+    border-radius: 50%; background: var(--color-purple);
+    transform: translateY(-2px);
+  }
+
+  /* ---------- Testimonial cards ---------- */
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
+  .quote-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-relaxed);
+    padding: 28px;
+    box-shadow: var(--shadow-2);
+    display: flex; flex-direction: column;
+  }
+  .quote-card blockquote {
+    margin: 0 0 20px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--color-label);
+  }
+  .quote-card__who {
+    margin-top: auto;
+    font-size: 13px; font-weight: 400; line-height: 1.5;
+    color: var(--color-muted);
+  }
+  .quote-card__name {
+    display: block;
+    font-size: 14px;
+    color: var(--color-label);
+  }
+
+  /* ---------- Engagements ---------- */
+  .engagement-group { margin-top: 48px; max-width: 860px; }
+  .engagement-group:first-of-type { margin-top: 32px; }
+  .engagement-group h3 {
+    font-size: 1.375rem;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    margin-bottom: 4px;
+  }
+  .stages {
+    list-style: none; margin: 20px 0 0; padding: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .stages li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 18px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 64px;
+    gap: 20px;
+    align-items: baseline;
+    font-weight: 300;
+  }
+  .stages__event { font-size: 1.0625rem; color: var(--color-label); }
+  .stages__role { font-size: 0.9375rem; color: var(--color-body); }
+  .stages__year { font-size: 0.9375rem; color: var(--color-muted); text-align: right; }
+  @media (max-width: 760px) {
+    .stages li { grid-template-columns: minmax(0, 1fr) 56px; gap: 4px 16px; }
+    .stages__event { grid-column: 1; }
+    .stages__year { grid-column: 2; grid-row: 1; }
+    .stages__role { grid-column: 1 / -1; }
+  }
+
+  /* ---------- Format cards ---------- */
+  .formats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media (max-width: 820px) { .formats { grid-template-columns: 1fr; } }
+  .format-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-relaxed);
+    padding: 28px;
+    box-shadow: var(--shadow-2);
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+  }
+  .format-card:hover {
+    box-shadow: var(--shadow-3);
+    transform: translateY(-2px);
+  }
+  .format-card h3 { font-size: 1.375rem; margin-bottom: 12px; }
+  .format-card p { margin: 0; color: var(--color-body); font-size: 1rem; }
+
+  /* ---------- Practical facts ---------- */
+  .facts {
+    margin: 32px 0 0;
+    max-width: 800px;
+    border-top: 1px solid var(--color-border);
+  }
+  .facts__row {
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+    align-items: baseline;
+  }
+  .facts__key {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .facts__val {
+    font-size: 1.0625rem; font-weight: 300; color: var(--color-label);
+    line-height: 1.55;
+  }
+  @media (max-width: 720px) {
+    .facts__row { grid-template-columns: 1fr; gap: 6px; }
+  }
+  .facts__note {
+    margin: 28px 0 0;
+    max-width: 660px;
+    font-size: 1rem;
+    color: var(--color-body);
+  }
+  .facts__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+
+  /* ---------- Speaker kit ---------- */
+  .bio-block {
+    border-top: 1px solid var(--color-border);
+    padding-top: 28px;
+    margin-top: 32px;
+    max-width: 760px;
+  }
+  .bio-block__label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 12px;
+  }
+  .bio-block p { color: var(--color-body); margin: 0; }
+  .bio-block p + p { margin-top: 1em; }
+
+  .downloads {
+    list-style: none;
+    margin: 20px 0 0; padding: 0;
+    max-width: 760px;
+    border-top: 1px solid var(--color-border);
+  }
+  .downloads li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 18px 0;
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 20px;
+  }
+  .downloads a { font-size: 1.0625rem; font-weight: 300; }
+  .downloads span { font-size: 13px; color: var(--color-muted); flex: 0 0 auto; }
+
+  /* ---------- Dark CTA ---------- */
+  .cta-dark { text-align: left; }
+  .cta-dark h2 { max-width: 760px; margin-bottom: 16px; }
+  .cta-dark p { color: rgba(255,255,255,0.65); max-width: 640px; margin-bottom: 36px; font-size: 1.0625rem; }
+  .cta-dark__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list {
+    max-width: 760px;
+    border-top: 1px solid var(--color-border);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 32px 0;
+  }
+  .faq-item h3 {
+    font-size: 1.25rem; font-weight: 300;
+    color: var(--color-heading);
+    margin-bottom: 14px;
+    letter-spacing: -0.2px;
+  }
+  .faq-item p { margin: 0; color: var(--color-body); font-size: 1rem; line-height: 1.7; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    background: var(--color-off-white);
+    border-top: 1px solid var(--color-border);
+    padding: 56px 0;
+  }
+  .footer__inner {
+    max-width: var(--max-content); margin: 0 auto;
+    padding: 0 var(--pad-x-desktop);
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .footer__links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+  .footer__links a { font-size: 14px; color: var(--color-label); }
+  .footer__links a:hover { color: var(--color-purple); }
+  .footer__copy { font-size: 13px; color: var(--color-muted); margin-top: 16px; width: 100%; }
+  @media (max-width: 720px) {
+    .footer__inner { padding: 0 var(--pad-x-mobile); }
+  }
+</style>
+
+<!-- ============================================
+     Schema.org structured data
+     For AI / GEO / AEO
+     ============================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://joeribillast.com/speaking#webpage",
+      "url": "https://joeribillast.com/speaking",
+      "name": "Keynote Speaker on AI and Trust | Joeri Billast",
+      "description": "Joeri Billast is a TEDx and international keynote speaker on marketing leadership in the AI era.",
+      "isPartOf": { "@id": "https://joeribillast.com/#website" },
+      "about": { "@id": "https://joeribillast.com/#person" },
+      "primaryImageOfPage": "https://joeribillast.com/assets/og-speaking.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joeribillast.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Speaking", "item": "https://joeribillast.com/speaking" }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://joeribillast.com/speaking#speaker-reel",
+      "name": "The Future CMO: Trust in the AI Era. Joeri Billast Speaker Reel 2026",
+      "description": "Speaker reel of Joeri Billast, international keynote speaker on marketing leadership in the age of artificial intelligence. Featuring TEDxChiado in Lisbon, Marketing+ Conference in Cairo, NEXT Summit in Valletta and DGT Innovation in Oeiras.",
+      "thumbnailUrl": "https://joeribillast.com/assets/speaking-reel-poster-1600.jpg",
+      "uploadDate": "2026-08-21",
+      "transcript": "AI didn't just democratize competence, it commoditized it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot. The question is, what do you want to be trusted for when everything else can be generated?",
+      "contentUrl": "https://www.youtube.com/watch?v=SileqsRbhAg",
+      "embedUrl": "https://www.youtube.com/embed/SileqsRbhAg",
+      "author": { "@id": "https://joeribillast.com/#person" },
+      "about": [
+        {"@type": "Thing", "name": "Keynote speaking"},
+        {"@type": "Thing", "name": "Marketing leadership"},
+        {"@type": "Thing", "name": "Brand trust"},
+        {"@type": "Thing", "name": "AI Visibility"}
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://joeribillast.com/#tedx-talk",
+      "name": "Trust is the only thing AI cannot scale",
+      "description": "TEDxChiado talk by Joeri Billast on why trust is the scarce resource in the age of generative AI, and what marketing leaders should optimize for instead.",
+      "thumbnailUrl": "https://joeribillast.com/assets/speaking-tedx-poster-1600.jpg",
+      "uploadDate": "2026-05-11",
+      "contentUrl": "https://www.youtube.com/watch?v=rUFx4FMBU-Q",
+      "embedUrl": "https://www.youtube.com/embed/rUFx4FMBU-Q",
+      "publisher": { "@type": "Organization", "name": "TEDxChiado" },
+      "author": { "@id": "https://joeribillast.com/#person" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://joeribillast.com/speaking#service",
+      "serviceType": "Keynote speaking",
+      "name": "Keynote speaking, workshops, panel moderation and event podcast hosting",
+      "provider": { "@id": "https://joeribillast.com/#person" },
+      "areaServed": "Worldwide",
+      "availableLanguage": ["en", "nl", "fr"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Conference organizers, executive teams, marketing leadership events"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://joeribillast.com/speaking#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Joeri Billast speak about?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditized competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand, and how organizations stay legible and citable in AI-mediated markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is a typical keynote by Joeri Billast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keynotes run 30, 45 or 60 minutes depending on the programme. Workshops and masterclasses run from 90 minutes to a half day. Panel moderation, fireside chats and event podcast recordings are scheduled by programme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In which languages does Joeri Billast speak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Joeri Billast based and does he travel for events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joeri Billast is Belgium-born and based in Lisbon, Portugal. He is available internationally, and travel and accommodation for events outside Lisbon are agreed in advance. Past stages include Lisbon, Brussels, Cairo, Valletta, Toronto, Berlin, Dubai and Porto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Joeri Billast moderate panels and host podcasts at events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the Web3 CMO Stories podcast from conferences and events. A live-audience recording format can be developed with the organizer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book Joeri Billast as a speaker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the event date, city, audience, desired format and indicative budget through the contact form on joeribillast.com. Fees are scoped according to format, location and preparation, and Joeri takes paid engagements only."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" role="banner">
+    <div class="nav__inner">
+      <a href="/" class="wordmark" aria-label="Joeri Billast, The Future CMO">
+        <img src="assets/joeri-icon-transparent.png" alt="" class="wordmark__icon" width="32" height="32" loading="eager" decoding="async">
+        <span class="wordmark__text">
+          <span class="wordmark__name">JOERI BILLAST</span>
+          <span class="wordmark__tag">The Future CMO</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/#positioning">What I do</a></li>
+          <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/speaking" aria-current="page">Speaking</a></li>
+          <li><a href="/#credentials">Credentials</a></li>
+          <li class="nav__cta"><a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost" target="_blank" rel="noopener">Request an introduction</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. HERO AND SPEAKER REEL ===================== -->
+    <section class="section section--hero speaker-hero" aria-labelledby="speaker-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Keynote speaking</span></div>
+
+        <h1 id="speaker-title" class="t-hero">AI commoditized competence. Trust is the only thing it cannot scale.</h1>
+
+        <div class="speaker-hero__lede">
+          <p class="t-body-lg">
+            I speak to marketing leaders and executive teams about the one advantage artificial intelligence
+            cannot generate for them. Ninety seconds of what that looks like on stage.
+          </p>
+        </div>
+
+        <div class="speaker-hero__ctas">
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Check availability</a>
+          <a href="https://www.youtube.com/watch?v=rUFx4FMBU-Q" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Watch my TEDx talk</a>
+        </div>
+
+        <p class="speaker-hero__meta">
+          <span>TEDxChiado 2026</span>
+          <span>English, Dutch, French</span>
+          <span>Based in Lisbon</span>
+        </p>
+
+        <!-- Speaker reel -->
+        <div class="video-embed" data-video-id="SileqsRbhAg">
+          <button type="button" class="video-embed__play" aria-label="Play the Joeri Billast speaker reel">
+            <picture>
+              <source srcset="assets/speaking-reel-poster-800.webp 800w, assets/speaking-reel-poster-1600.webp 1600w"
+                      sizes="(max-width: 920px) 100vw, 880px" type="image/webp">
+              <img
+                src="assets/speaking-reel-poster-1600.jpg"
+                srcset="assets/speaking-reel-poster-800.jpg 800w, assets/speaking-reel-poster-1600.jpg 1600w"
+                sizes="(max-width: 920px) 100vw, 880px"
+                width="1600" height="900"
+                alt="Joeri Billast on stage in New York with a microphone, speaker reel"
+                class="video-embed__thumb"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async">
+            </picture>
+            <span class="video-embed__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        </div>
+        <p class="video-caption">
+          Speaker reel 2026. Featuring TEDxChiado (Lisbon), Marketing+ Conference (Cairo),
+          NEXT Summit (Valletta) and DGT Innovation (Oeiras).
+        </p>
+
+        <details class="transcript">
+          <summary>Read the speaker-reel transcript</summary>
+          <div class="transcript__body">
+            <p>AI didn't just democratize competence, it commoditized it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot.</p>
+            <p>The question is, what do you want to be trusted for when everything else can be generated?</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== 2. TESTIMONIALS ===================== -->
+    <section id="testimonials" class="section section--alt" aria-labelledby="testimonials-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">What organizers say</span></div>
+        <h2 id="testimonials-title" class="t-h2">Booked by the people who had to answer for the programme.</h2>
+
+        <div class="quote-grid">
+          <figure class="quote-card">
+            <blockquote>Joeri's keynote on The CMO of the Future was insightful, inspiring, and perfectly timed for today's marketing leaders.</blockquote>
+            <figcaption class="quote-card__who">
+              <span class="quote-card__name">Akram Saad</span>
+              Co-founder of Nexus, co-organizer of Marketing+ Conference, Cairo
+            </figcaption>
+          </figure>
+
+          <figure class="quote-card">
+            <blockquote>Joeri delivered an impactful keynote at DGTLX25. Energetic, insightful, and a perfect summary of where marketing and AI are heading.</blockquote>
+            <figcaption class="quote-card__who">
+              <span class="quote-card__name">Flavio Horta</span>
+              CEO, DGT Innovation
+            </figcaption>
+          </figure>
+
+          <figure class="quote-card">
+            <blockquote>Joeri brought such great energy to Worktugal. His talk on trust and AI really clicked with our audience. Smart, inspiring, and full of real-world insights.</blockquote>
+            <figcaption class="quote-card__who">
+              <span class="quote-card__name">Van Vo</span>
+              Co-founder, REMOTE Worktugal
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. SIGNATURE KEYNOTE ===================== -->
+    <section id="keynote" class="section" aria-labelledby="keynote-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Signature keynote</span></div>
+        <h2 id="keynote-title" class="t-h2">The Future CMO: why trust becomes marketing's new advantage in the AI era.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            AI did not just democratize competence. It commoditized it. Expertise can be generated, polish can be
+            generated, and a confident answer costs nothing to produce. What cannot be generated is the reason
+            someone believes you. This talk is about designing for that reason on purpose.
+          </p>
+        </div>
+
+        <div class="outcome">
+          <div class="outcome__label">What the room walks out with</div>
+          <p>
+            After this talk, marketing leaders can identify where AI makes their brand interchangeable, define the
+            trust their brand needs to earn, and translate that into priorities for positioning, visibility and
+            customer experience.
+          </p>
+        </div>
+
+        <ul class="takeaways">
+          <li>Why AI commoditizes competence, and why credibility becomes the scarce resource</li>
+          <li>Why trust has to be designed as an input, not measured as an output</li>
+          <li>What happens when an AI system says something wrong in your name</li>
+          <li>How the CMO evolves from campaign manager into trust architect and Chief Value Officer</li>
+          <li>What you want to be trusted for, when everything else can be generated</li>
+        </ul>
+
+        <blockquote class="endorsement">
+          <p>Great insights and very professional delivery.</p>
+          <cite>
+            <strong>Mark Schaefer</strong>, bestselling author of <em>Marketing Rebellion</em>, <em>Known</em>
+            and <em>Belonging to the Brand</em>
+          </cite>
+        </blockquote>
+
+        <figure class="stage-figure">
+          <picture>
+            <source srcset="assets/speaking-keynote-800.webp 800w, assets/speaking-keynote-1600.webp 1600w"
+                    sizes="(max-width: 920px) 100vw, 880px" type="image/webp">
+            <img src="assets/speaking-keynote-1600.jpg"
+                 srcset="assets/speaking-keynote-800.jpg 800w, assets/speaking-keynote-1600.jpg 1600w"
+                 sizes="(max-width: 920px) 100vw, 880px"
+                 width="1600" height="900"
+                 alt="Joeri Billast on stage in New York taking a question from a member of the audience"
+                 loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== 4. FULL TEDX TALK ===================== -->
+    <section id="tedx" class="section section--alt" aria-labelledby="tedx-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow" style="text-transform: none;">TEDxChiado, May 2026</span></div>
+        <h2 id="tedx-title" class="t-h2">The full talk: trust is the only thing AI cannot scale.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            The reel shows the range. This shows the thinking, uncut, in front of a live audience.
+          </p>
+        </div>
+
+        <div class="video-embed" data-video-id="rUFx4FMBU-Q" style="margin-top: 40px;">
+          <button type="button" class="video-embed__play" aria-label="Play TEDx talk: Trust is the only thing AI cannot scale">
+            <picture>
+              <source srcset="assets/speaking-tedx-poster-800.webp 800w, assets/speaking-tedx-poster-1600.webp 1600w"
+                      sizes="(max-width: 920px) 100vw, 880px" type="image/webp">
+              <img src="assets/speaking-tedx-poster-1600.jpg"
+                   srcset="assets/speaking-tedx-poster-800.jpg 800w, assets/speaking-tedx-poster-1600.jpg 1600w"
+                   sizes="(max-width: 920px) 100vw, 880px"
+                   width="1600" height="743"
+                   alt="Joeri Billast on the TEDxChiado stage"
+                   class="video-embed__thumb"
+                   loading="lazy" decoding="async">
+            </picture>
+            <span class="video-embed__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. ENGAGEMENTS ===================== -->
+    <section id="engagements" class="section" aria-labelledby="engagements-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Track record</span></div>
+        <h2 id="engagements-title" class="t-h2">Selected speaking and moderation engagements.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            Conferences, leadership events and industry summits across Europe, the Middle East and North America.
+          </p>
+        </div>
+
+        <div class="engagement-group">
+          <h3>The Future CMO, AI and trust</h3>
+          <ul class="stages">
+            <li>
+              <span class="stages__event">Marketing+ Conference, Cairo</span>
+              <span class="stages__role">Keynote</span>
+              <span class="stages__year">2024</span>
+            </li>
+            <li>
+              <span class="stages__event">DGT Innovation, DGTLX25, Oeiras</span>
+              <span class="stages__role">Keynote</span>
+              <span class="stages__year">2025</span>
+            </li>
+            <li>
+              <span class="stages__event">TEDxChiado, Lisbon</span>
+              <span class="stages__role">TEDx talk</span>
+              <span class="stages__year">2026</span>
+            </li>
+            <li>
+              <span class="stages__event">NEXT Summit, Valletta</span>
+              <span class="stages__role">Fireside chat</span>
+              <span class="stages__year">2026</span>
+            </li>
+            <li>
+              <span class="stages__event">More Agencies</span>
+              <span class="stages__role">Webinar on The Future CMO</span>
+              <span class="stages__year">2026</span>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="stage-figure">
+          <picture>
+            <source srcset="assets/speaking-next-valletta-800.webp 800w, assets/speaking-next-valletta-1600.webp 1600w"
+                    sizes="(max-width: 920px) 100vw, 880px" type="image/webp">
+            <img src="assets/speaking-next-valletta-1600.jpg"
+                 srcset="assets/speaking-next-valletta-800.jpg 800w, assets/speaking-next-valletta-1600.jpg 1600w"
+                 sizes="(max-width: 920px) 100vw, 880px"
+                 width="1600" height="781"
+                 alt="Joeri Billast in a fireside chat on the NEXT Summit stage in Valletta with moderator Valentina Diaco"
+                 loading="lazy" decoding="async">
+          </picture>
+          <figcaption>
+            NEXT Summit, Valletta 2026. Interviewed on stage by Valentina Diaco: is the CMO dead, long live
+            the Chief Value Officer.
+          </figcaption>
+        </figure>
+
+        <div class="engagement-group">
+          <h3>Other keynotes and talks</h3>
+          <ul class="stages">
+            <li>
+              <span class="stages__event">BAM Marketing Congress, Brussels</span>
+              <span class="stages__role">Keynote on Web3, NFTs and the metaverse</span>
+              <span class="stages__year">2023</span>
+            </li>
+            <li>
+              <span class="stages__event">REMOTE Worktugal, Lisbon</span>
+              <span class="stages__role">Ten-minute talk on trust and AI</span>
+              <span class="stages__year">2025</span>
+            </li>
+            <li>
+              <span class="stages__event">Lisbon Founders Club, Lisbon</span>
+              <span class="stages__role">Talk</span>
+              <span class="stages__year">2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="engagement-group">
+          <h3>Web3 panel moderation</h3>
+          <ul class="stages">
+            <li>
+              <span class="stages__event">Blockchain Futurist Conference, Toronto</span>
+              <span class="stages__role">Moderator, main-stage panel for the main sponsor</span>
+              <span class="stages__year">2024</span>
+            </li>
+            <li>
+              <span class="stages__event">Next Block Expo, Berlin</span>
+              <span class="stages__role">Panel moderator</span>
+              <span class="stages__year">2023</span>
+            </li>
+            <li>
+              <span class="stages__event">WOW Summit, Dubai</span>
+              <span class="stages__role">Panel moderator</span>
+              <span class="stages__year">2023</span>
+            </li>
+            <li>
+              <span class="stages__event">CODA, Porto</span>
+              <span class="stages__role">Panel moderator</span>
+              <span class="stages__year">2025</span>
+            </li>
+            <li>
+              <span class="stages__event">Caffeine AI, Web Summit side event, Lisbon</span>
+              <span class="stages__role">Moderator, Web 4.0: Designed by AI</span>
+              <span class="stages__year">2025</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. FORMATS ===================== -->
+    <section id="formats" class="section section--alt" aria-labelledby="formats-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Formats</span></div>
+        <h2 id="formats-title" class="t-h2">More than a keynote slot.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            Most speakers fill one gap in your programme. I can fill several, which usually makes the travel
+            budget work harder for you.
+          </p>
+        </div>
+
+        <div class="formats">
+          <article class="format-card">
+            <h3>Keynote</h3>
+            <p>The signature talk on why AI commoditized competence and why trust becomes marketing's new advantage. Thirty, forty-five or sixty minutes, tailored to the event theme and audience.</p>
+          </article>
+          <article class="format-card">
+            <h3>AI marketing workshops and masterclasses</h3>
+            <p>Hands-on sessions for marketing teams and leadership groups on AI, trust, positioning and AI visibility. Formats can run from ninety minutes to a half day.</p>
+          </article>
+          <article class="format-card">
+            <h3>Web3 and AI panel moderation</h3>
+            <p>Moderation with pace, structure and a clear narrative, particularly for Web3, AI and marketing conversations.</p>
+          </article>
+          <article class="format-card">
+            <h3>Event podcast host</h3>
+            <p>I host and record <em>Web3 CMO Stories</em> from conferences and events, including recordings at Web Summit. A live-audience format can be developed with the organizer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. PRACTICAL ===================== -->
+    <section id="practical" class="section" aria-labelledby="practical-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Practical</span></div>
+        <h2 id="practical-title" class="t-h2">What you need to know before you ask.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            Everything a programme lead usually has to email for, answered here instead.
+          </p>
+        </div>
+
+        <div class="facts">
+          <div class="facts__row">
+            <div class="facts__key">Based in</div>
+            <div class="facts__val">Lisbon, Portugal.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Travels to</div>
+            <div class="facts__val">Available internationally. Travel and accommodation for events outside Lisbon are agreed in advance.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Languages</div>
+            <div class="facts__val">Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Formats and length</div>
+            <div class="facts__val">Keynotes: 30, 45 or 60 minutes, depending on the programme. Workshops and masterclasses: 90 minutes to a half day. Panel moderation, fireside chats and event podcast recordings by programme.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Lead time</div>
+            <div class="facts__val">Most engagements are planned well in advance, but enquiries for nearer dates are welcome when preparation and travel allow.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Fees</div>
+            <div class="facts__val">Fees are scoped according to format, location and preparation. Paid engagements only.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Preparation</div>
+            <div class="facts__val">Each keynote starts with a briefing conversation and is tailored to the event theme, audience and industry, while keeping the core argument intact.</div>
+          </div>
+          <div class="facts__row">
+            <div class="facts__key">Technical</div>
+            <div class="facts__val">Detailed technical requirements are shared and coordinated in advance with the event team.</div>
+          </div>
+        </div>
+
+        <p class="facts__note">
+          For a quick answer, include the event date, city, audience, desired format and indicative budget.
+        </p>
+
+        <div class="facts__cta">
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Check availability</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 8. SPEAKER KIT ===================== -->
+    <section id="kit" class="section section--alt" aria-labelledby="kit-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Speaker kit</span></div>
+        <h2 id="kit-title" class="t-h2">Everything your programme team needs, without asking.</h2>
+
+        <div class="reading">
+          <p class="t-body-lg">
+            Copy the bio that fits your format. High-resolution photography for programmes and press is linked below.
+          </p>
+        </div>
+
+        <div class="bio-block">
+          <div class="bio-block__label">Bio, short, 40 words</div>
+          <p>Joeri Billast is a Belgium-born, Portugal-based Fractional CMO, AI Visibility Strategist and author of <em>The Future CMO</em>, endorsed by Philip Kotler. He spoke at TEDxChiado in 2026 on why trust is the only thing AI cannot scale.</p>
+        </div>
+
+        <div class="bio-block">
+          <div class="bio-block__label">Bio, medium, 100 words</div>
+          <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist who advises founders and executive teams on marketing leadership in AI-driven markets. He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to books by Mark Schaefer and Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, a podcast in the top five percent globally with more than 280 episodes. Belgium-born and based in Portugal, he has spoken at TEDxChiado, Marketing+ Conference in Cairo, NEXT Summit in Valletta and BAM Marketing Congress in Brussels, in English, Dutch and French.</p>
+        </div>
+
+        <div class="bio-block">
+          <div class="bio-block__label">Bio, long, 200 words</div>
+          <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist. He works with founders and executive teams on brand positioning and marketing leadership in markets where artificial intelligence increasingly mediates how customers find, evaluate and choose brands.</p>
+          <p>He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to <em>The Most Amazing Marketing Book Ever</em> by Mark Schaefer and <em>The Content Entrepreneur</em> by Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, a podcast in the top five percent globally with more than 280 episodes and guests including Gary Vaynerchuk and Chris Do. He also created Sintra Synergies, a curated marketing and AI retreat in Portugal.</p>
+          <p>On stage his argument is consistent: artificial intelligence has commoditized competence, which makes trust the scarce resource and the only advantage that cannot be generated. He spoke at TEDxChiado in Lisbon in 2026, and has appeared at Marketing+ Conference in Cairo, NEXT Summit in Valletta, DGT Innovation in Oeiras and BAM Marketing Congress in Brussels. Belgium-born and based in Portugal, he speaks in English, Dutch and French.</p>
+        </div>
+
+        <div class="bio-block">
+          <div class="bio-block__label">Photography, high resolution</div>
+          <ul class="downloads">
+            <li>
+              <a href="assets/On%20stage%20New%20York.png" download>On stage in New York, close</a>
+              <span>PNG, 1572 × 1010</span>
+            </li>
+            <li>
+              <a href="assets/17.-Marketing-Hub-NEXT%20Valletta.jpeg" download>NEXT Summit, Valletta, fireside chat</a>
+              <span>JPEG, 2048 × 1365</span>
+            </li>
+            <li>
+              <a href="assets/Joeri%20by%20Tasha2.JPG" download>On stage in New York, full length</a>
+              <span>JPEG, 1600 × 1066</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. CTA ===================== -->
+    <section id="contact" class="section section--dark cta-dark" aria-labelledby="cta-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Book Joeri</span></div>
+        <h2 id="cta-title" class="t-h2">I take on a limited number of stages each year and prepare each one properly.</h2>
+        <p>
+          For a quick answer, include the event date, city, audience, desired format and indicative budget.
+        </p>
+        <div class="cta-dark__buttons">
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Check availability</a>
+          <a href="/#positioning" class="btn btn--ghost-dark">See advisory work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10. FAQ ===================== -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="section__inner">
+        <div class="eyebrow-row"><span class="t-eyebrow">Frequently asked</span></div>
+        <h2 id="faq-title" class="t-h2">Questions from event organizers.</h2>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>What does Joeri Billast speak about?</h3>
+            <p>Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditized competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand, and how organizations stay legible and citable in AI-mediated markets.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How long is a typical keynote by Joeri Billast?</h3>
+            <p>Keynotes run 30, 45 or 60 minutes depending on the programme. Workshops and masterclasses run from 90 minutes to a half day. Panel moderation, fireside chats and event podcast recordings are scheduled by programme.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>In which languages does Joeri Billast speak?</h3>
+            <p>Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Where is Joeri Billast based and does he travel for events?</h3>
+            <p>Joeri Billast is Belgium-born and based in Lisbon, Portugal. He is available internationally, and travel and accommodation for events outside Lisbon are agreed in advance. Past stages include Lisbon, Brussels, Cairo, Valletta, Toronto, Berlin, Dubai and Porto.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Does Joeri Billast moderate panels and host podcasts at events?</h3>
+            <p>Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the <em>Web3 CMO Stories</em> podcast from conferences and events. A live-audience recording format can be developed with the organizer.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How do I book Joeri Billast as a speaker?</h3>
+            <p>Send the event date, city, audience, desired format and indicative budget through the contact form on joeribillast.com. Fees are scoped according to format, location and preparation, and Joeri takes paid engagements only.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <a href="/" class="wordmark" aria-label="Joeri Billast, The Future CMO">
+        <img src="assets/joeri-icon-transparent.png" alt="" class="wordmark__icon" width="40" height="40" loading="lazy" decoding="async">
+        <span class="wordmark__text">
+          <span class="wordmark__name">JOERI BILLAST</span>
+          <span class="wordmark__tag">The Future CMO</span>
+        </span>
+      </a>
+      <ul class="footer__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/future-cmo">The Future CMO</a></li>
+        <li><a href="/ai-visibility">AI Visibility</a></li>
+        <li><a href="/speaking">Speaking</a></li>
+        <li><a href="https://www.linkedin.com/in/joeribillast/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.cmo-stories.com" rel="noopener">Podcast</a></li>
+        <li><a href="https://www.amazon.com/author/joeribillast" rel="noopener">Amazon author</a></li>
+        <li><a href="https://webdrie.net" rel="noopener">Webdrie</a></li>
+        <li><a href="https://myformflow.io/efficado/contact-joeri" target="_blank" rel="noopener">Contact</a></li>
+      </ul>
+      <div class="footer__copy">© 2026 Joeri Billast. Belgium · Portugal.</div>
+    </div>
+  </footer>
+
+<script>
+  // Video facade: replace the poster with the real iframe on click.
+  document.querySelectorAll('.video-embed').forEach(function (container) {
+    var btn = container.querySelector('.video-embed__play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = container.dataset.videoId;
+      if (!id) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = btn.getAttribute('aria-label') || 'YouTube video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      container.replaceChild(iframe, btn);
+    });
+  });
+</script>
+</body>
+</html>
