@@ -316,18 +316,39 @@ hover → color: #5b3fcf;
 
 Nav items (all pages, same order): What I do · Perspective · Speaking · Credentials · [Request an introduction]
 
-Mobile (≤720px): hide the text links, keep the CTA. Never hide the whole `.nav__links`,
-that leaves the page with no reachable action. Full navigation stays available in the footer.
+Markup: `.nav__inner` holds the wordmark and a `.nav__right` flex row containing
+`<nav><ul class="nav__links" id="primary-nav">`, the CTA `<a class="btn btn--ghost nav__cta-btn">`
+and `<button class="nav__toggle" hidden>`. The CTA lives outside the list so it can stay in the
+bar while the list collapses.
+
+Mobile (≤720px): the text links collapse into a disclosure panel that drops below the bar.
+The bar keeps the wordmark, the CTA (short label "Get in touch" via `.nav__cta-short`) and a
+hamburger toggle. Never hide `.nav__links` outright, that leaves the page with no navigation.
 
 ```css
-@media (max-width: 900px) { .nav__links { gap: 22px; } }
+@media (max-width: 900px) { .nav__links { gap: 22px; } .nav__right { gap: 22px; } }
 @media (max-width: 720px) {
-  .nav__links > li:not(.nav__cta) { display: none; }
-  .nav__links { gap: 0; }
-  .nav__cta { margin-left: 0; }
-  .nav__cta .btn { padding: 8px 14px; font-size: 14px; }
+  .nav__toggle { display: inline-flex; }        /* 40px, 1px border, radius-standard */
+  .nav__cta-long { display: none; }
+  .nav__cta-short { display: inline; }
+  .nav--js .nav__links {                        /* panel under the sticky bar */
+    position: absolute; top: var(--nav-height); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--color-white);             /* opaque: the bar's backdrop-filter bleeds */
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-3);
+  }
+  .nav--js .nav__links[data-open="false"] { display: none; }
 }
 ```
+
+Progressive enhancement: the toggle ships with `hidden` and the panel only collapses once the
+script adds `.nav--js`. Without JavaScript the links stay visible and stack. The script also
+closes the panel on link click, on Escape, and above 720px.
+
+The wordmark needs `flex: 0 0 auto` and `white-space: nowrap`, otherwise it wraps in the
+tighter mobile bar. `.footer__links` needs `flex-wrap: wrap`, otherwise the footer forces
+horizontal scrolling on phones.
 
 ### Dark Section
 
