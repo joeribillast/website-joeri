@@ -568,21 +568,101 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://joeribillast.com/#person",
+      "name": "Joeri Billast",
+      "givenName": "Joeri",
+      "familyName": "Billast",
+      "url": "https://joeribillast.com/",
+      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
+      "jobTitle": "Fractional CMO and AI Visibility Strategist",
+      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
+      "nationality": {
+        "@type": "Country",
+        "name": "Belgium"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Sintra, Portugal"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Efficado"
+      },
+      "knowsAbout": [
+        "Marketing leadership",
+        "AI visibility",
+        "Generative engine optimization",
+        "Brand positioning",
+        "Fractional CMO",
+        "Trust in marketing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/joeribillast",
+        "https://www.youtube.com/c/JoeriBillast",
+        "https://x.com/joeribillast",
+        "https://www.instagram.com/joeribillast",
+        "https://www.facebook.com/joeri.billast",
+        "https://pinterest.com/joeribillast",
+        "https://www.tiktok.com/@joeribillast",
+        "https://www.tiktok.com/@aiwithjoeri",
+        "https://www.cmo-stories.com",
+        "https://www.amazon.com/author/joeribillast",
+        "https://webdrie.net"
+      ],
+      "mainEntityOfPage": "https://joeribillast.com",
+      "subjectOf": [
+        {
+          "@id": "https://joeribillast.com/#tedx-talk"
+        },
+        {
+          "@id": "https://joeribillast.com/future-cmo#article"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#article"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://joeribillast.com/#website",
+      "name": "Joeri Billast",
+      "url": "https://joeribillast.com",
+      "publisher": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://joeribillast.com/speaking#webpage",
       "url": "https://joeribillast.com/speaking",
       "name": "Keynote Speaker on AI and Trust | Joeri Billast",
       "description": "Joeri Billast is a TEDx and international keynote speaker on marketing leadership in the AI era.",
-      "isPartOf": { "@id": "https://joeribillast.com/#website" },
-      "about": { "@id": "https://joeribillast.com/#person" },
+      "isPartOf": {
+        "@id": "https://joeribillast.com/#website"
+      },
+      "about": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "primaryImageOfPage": "https://joeribillast.com/assets/og-speaking.jpg",
       "inLanguage": "en"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joeribillast.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Speaking", "item": "https://joeribillast.com/speaking" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joeribillast.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Speaking",
+          "item": "https://joeribillast.com/speaking"
+        }
       ]
     },
     {
@@ -595,12 +675,26 @@
       "transcript": "AI didn't just democratize competence, it commoditized it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot. The question is, what do you want to be trusted for when everything else can be generated?",
       "contentUrl": "https://www.youtube.com/watch?v=SileqsRbhAg",
       "embedUrl": "https://www.youtube.com/embed/SileqsRbhAg",
-      "author": { "@id": "https://joeribillast.com/#person" },
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "about": [
-        {"@type": "Thing", "name": "Keynote speaking"},
-        {"@type": "Thing", "name": "Marketing leadership"},
-        {"@type": "Thing", "name": "Brand trust"},
-        {"@type": "Thing", "name": "AI Visibility"}
+        {
+          "@type": "Thing",
+          "name": "Keynote speaking"
+        },
+        {
+          "@type": "Thing",
+          "name": "Marketing leadership"
+        },
+        {
+          "@type": "Thing",
+          "name": "Brand trust"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Visibility"
+        }
       ]
     },
     {
@@ -612,17 +706,28 @@
       "uploadDate": "2026-05-11T00:00:00+01:00",
       "contentUrl": "https://www.youtube.com/watch?v=rUFx4FMBU-Q",
       "embedUrl": "https://www.youtube.com/embed/rUFx4FMBU-Q",
-      "publisher": { "@type": "Organization", "name": "TEDxChiado" },
-      "author": { "@id": "https://joeribillast.com/#person" }
+      "publisher": {
+        "@type": "Organization",
+        "name": "TEDxChiado"
+      },
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      }
     },
     {
       "@type": "Service",
       "@id": "https://joeribillast.com/speaking#service",
       "serviceType": "Keynote speaking",
       "name": "Keynote speaking, workshops, panel moderation and event podcast hosting",
-      "provider": { "@id": "https://joeribillast.com/#person" },
+      "provider": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "areaServed": "Worldwide",
-      "availableLanguage": ["en", "nl", "fr"],
+      "availableLanguage": [
+        "en",
+        "nl",
+        "fr"
+      ],
       "audience": {
         "@type": "Audience",
         "audienceType": "Conference organizers, executive teams, marketing leadership events"

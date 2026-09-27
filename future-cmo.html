@@ -361,24 +361,116 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://joeribillast.com/#person",
+      "name": "Joeri Billast",
+      "givenName": "Joeri",
+      "familyName": "Billast",
+      "url": "https://joeribillast.com/",
+      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
+      "jobTitle": "Fractional CMO and AI Visibility Strategist",
+      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
+      "nationality": {
+        "@type": "Country",
+        "name": "Belgium"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Sintra, Portugal"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Efficado"
+      },
+      "knowsAbout": [
+        "Marketing leadership",
+        "AI visibility",
+        "Generative engine optimization",
+        "Brand positioning",
+        "Fractional CMO",
+        "Trust in marketing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/joeribillast",
+        "https://www.youtube.com/c/JoeriBillast",
+        "https://x.com/joeribillast",
+        "https://www.instagram.com/joeribillast",
+        "https://www.facebook.com/joeri.billast",
+        "https://pinterest.com/joeribillast",
+        "https://www.tiktok.com/@joeribillast",
+        "https://www.tiktok.com/@aiwithjoeri",
+        "https://www.cmo-stories.com",
+        "https://www.amazon.com/author/joeribillast",
+        "https://webdrie.net"
+      ],
+      "mainEntityOfPage": "https://joeribillast.com",
+      "subjectOf": [
+        {
+          "@id": "https://joeribillast.com/#tedx-talk"
+        },
+        {
+          "@id": "https://joeribillast.com/future-cmo#article"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#article"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://joeribillast.com/#website",
+      "name": "Joeri Billast",
+      "url": "https://joeribillast.com",
+      "publisher": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
       "@type": "Article",
       "@id": "https://joeribillast.com/future-cmo#article",
       "headline": "The Future CMO: Why the Role Is Becoming a Chief Value Officer",
       "description": "Why the CMO is becoming a Chief Value Officer, and why trust is the one thing AI cannot scale. The thesis behind The Future CMO by Joeri Billast.",
-      "author": { "@id": "https://joeribillast.com/#person" },
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "about": [
-        { "@type": "Thing", "name": "Future CMO" },
-        { "@type": "Thing", "name": "Chief Value Officer" },
-        { "@type": "Thing", "name": "AI Visibility" },
-        { "@type": "Thing", "name": "Brand Trust" }
+        {
+          "@type": "Thing",
+          "name": "Future CMO"
+        },
+        {
+          "@type": "Thing",
+          "name": "Chief Value Officer"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Visibility"
+        },
+        {
+          "@type": "Thing",
+          "name": "Brand Trust"
+        }
       ],
       "mentions": [
-        { "@id": "https://joeribillast.com/#future-cmo-book" },
-        { "@id": "https://joeribillast.com/#tedx-talk" },
-        { "@type": "Person", "name": "Philip Kotler" },
-        { "@type": "Person", "name": "Mark Schaefer" }
+        {
+          "@id": "https://joeribillast.com/#future-cmo-book"
+        },
+        {
+          "@id": "https://joeribillast.com/#tedx-talk"
+        },
+        {
+          "@type": "Person",
+          "name": "Philip Kotler"
+        },
+        {
+          "@type": "Person",
+          "name": "Mark Schaefer"
+        }
       ],
-      "isPartOf": { "@id": "https://joeribillast.com/#website" },
+      "isPartOf": {
+        "@id": "https://joeribillast.com/#website"
+      },
       "mainEntityOfPage": "https://joeribillast.com/future-cmo",
       "image": [
         "https://joeribillast.com/assets/billboard.jpg",
@@ -386,14 +478,6 @@
       ],
       "datePublished": "2026-06-19",
       "dateModified": "2026-06-19",
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://joeribillast.com/#website",
-      "name": "Joeri Billast",
-      "url": "https://joeribillast.com",
-      "publisher": { "@id": "https://joeribillast.com/#person" },
       "inLanguage": "en"
     },
     {
@@ -410,27 +494,42 @@
         {
           "@type": "Question",
           "name": "What is the Future CMO?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The Future CMO is a marketing leader who optimizes for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book The Future CMO by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Future CMO is a marketing leader who optimizes for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book The Future CMO by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat."
+          }
         },
         {
           "@type": "Question",
           "name": "What is a Chief Value Officer?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A Chief Value Officer is the role the traditional CMO is evolving into. The Chief Value Officer is accountable for the value a brand can earn and prove, ties trust and community to financial outcomes and treats trust as a measurable business asset rather than a soft virtue. It applies the CEO's core value-creation logic to the surface where a brand meets its market, which is why it is a reconstruction of the role and not just a new title. The term was developed by Joeri Billast and discussed with Philip Kotler on the Web3 CMO Stories podcast." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Chief Value Officer is the role the traditional CMO is evolving into. The Chief Value Officer is accountable for the value a brand can earn and prove, ties trust and community to financial outcomes and treats trust as a measurable business asset rather than a soft virtue. It applies the CEO's core value-creation logic to the surface where a brand meets its market, which is why it is a reconstruction of the role and not just a new title. The term was developed by Joeri Billast and discussed with Philip Kotler on the Web3 CMO Stories podcast."
+          }
         },
         {
           "@type": "Question",
           "name": "Why can't AI scale trust?",
-          "acceptedAnswer": { "@type": "Answer", "text": "AI can generate content, images, campaigns and strategy documents, but trust is earned through repeated kept promises over time. AI amplifies whatever strategy and positioning a brand already has. It does not create trust where none exists, which is why trust becomes the differentiator when everything else is automated." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI can generate content, images, campaigns and strategy documents, but trust is earned through repeated kept promises over time. AI amplifies whatever strategy and positioning a brand already has. It does not create trust where none exists, which is why trust becomes the differentiator when everything else is automated."
+          }
         },
         {
           "@type": "Question",
           "name": "Who is Joeri Billast?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Joeri Billast is a Fractional CMO and AI Visibility Strategist based in Sintra, Portugal, author of The Future CMO, host of the Web3 CMO Stories podcast and a TEDxChiado speaker. He developed the Future CMO and Chief Value Officer frameworks." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joeri Billast is a Fractional CMO and AI Visibility Strategist based in Sintra, Portugal, author of The Future CMO, host of the Web3 CMO Stories podcast and a TEDxChiado speaker. He developed the Future CMO and Chief Value Officer frameworks."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I make my brand citable by AI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "That is the operational counterpart to this strategic thesis. Joeri has written a separate pillar on how to make your brand citable by AI, covering entity SEO, schema and the trust signals that determine whether AI tools recommend you." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That is the operational counterpart to this strategic thesis. Joeri has written a separate pillar on how to make your brand citable by AI, covering entity SEO, schema and the trust signals that determine whether AI tools recommend you."
+          }
         }
       ]
     }

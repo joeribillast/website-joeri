@@ -328,36 +328,119 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
-      "@id": "https://joeribillast.com/ai-visibility#article",
-      "headline": "AI Visibility: How to Get Your Brand Cited by AI",
-      "description": "What AI Visibility is, why most brands get it wrong and the five layers that decide whether AI tools cite you.",
-      "author": { "@id": "https://joeribillast.com/#person" },
-      "about": [
-        { "@type": "Thing", "name": "AI Visibility" },
-        { "@type": "Thing", "name": "AI Share of Voice" },
-        { "@type": "Thing", "name": "Generative Engine Optimization" },
-        { "@type": "Thing", "name": "Answer Engine Optimization" },
-        { "@type": "Thing", "name": "AI Identity Optimization" }
+      "@type": "Person",
+      "@id": "https://joeribillast.com/#person",
+      "name": "Joeri Billast",
+      "givenName": "Joeri",
+      "familyName": "Billast",
+      "url": "https://joeribillast.com/",
+      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
+      "jobTitle": "Fractional CMO and AI Visibility Strategist",
+      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
+      "nationality": {
+        "@type": "Country",
+        "name": "Belgium"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Sintra, Portugal"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Efficado"
+      },
+      "knowsAbout": [
+        "Marketing leadership",
+        "AI visibility",
+        "Generative engine optimization",
+        "Brand positioning",
+        "Fractional CMO",
+        "Trust in marketing"
       ],
-      "mentions": [
-        { "@id": "https://joeribillast.com/future-cmo#article" },
-        { "@id": "https://joeribillast.com/ai-visibility#ai-visibility" },
-        { "@id": "https://joeribillast.com/ai-visibility#ai-share-of-voice" }
+      "sameAs": [
+        "https://www.linkedin.com/in/joeribillast",
+        "https://www.youtube.com/c/JoeriBillast",
+        "https://x.com/joeribillast",
+        "https://www.instagram.com/joeribillast",
+        "https://www.facebook.com/joeri.billast",
+        "https://pinterest.com/joeribillast",
+        "https://www.tiktok.com/@joeribillast",
+        "https://www.tiktok.com/@aiwithjoeri",
+        "https://www.cmo-stories.com",
+        "https://www.amazon.com/author/joeribillast",
+        "https://webdrie.net"
       ],
-      "isPartOf": { "@id": "https://joeribillast.com/#website" },
-      "mainEntityOfPage": "https://joeribillast.com/ai-visibility",
-      "image": "https://joeribillast.com/assets/joeri-billast-speaking.jpg",
-      "datePublished": "2026-06-19",
-      "dateModified": "2026-06-19",
-      "inLanguage": "en"
+      "mainEntityOfPage": "https://joeribillast.com",
+      "subjectOf": [
+        {
+          "@id": "https://joeribillast.com/#tedx-talk"
+        },
+        {
+          "@id": "https://joeribillast.com/future-cmo#article"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#article"
+        }
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://joeribillast.com/#website",
       "name": "Joeri Billast",
       "url": "https://joeribillast.com",
-      "publisher": { "@id": "https://joeribillast.com/#person" },
+      "publisher": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://joeribillast.com/ai-visibility#article",
+      "headline": "AI Visibility: How to Get Your Brand Cited by AI",
+      "description": "What AI Visibility is, why most brands get it wrong and the five layers that decide whether AI tools cite you.",
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI Visibility"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Share of Voice"
+        },
+        {
+          "@type": "Thing",
+          "name": "Generative Engine Optimization"
+        },
+        {
+          "@type": "Thing",
+          "name": "Answer Engine Optimization"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Identity Optimization"
+        }
+      ],
+      "mentions": [
+        {
+          "@id": "https://joeribillast.com/future-cmo#article"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#ai-visibility"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#ai-share-of-voice"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://joeribillast.com/#website"
+      },
+      "mainEntityOfPage": "https://joeribillast.com/ai-visibility",
+      "image": "https://joeribillast.com/assets/joeri-billast-speaking.jpg",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
       "inLanguage": "en"
     },
     {
@@ -381,27 +464,42 @@
         {
           "@type": "Question",
           "name": "What is AI Visibility?",
-          "acceptedAnswer": { "@type": "Answer", "text": "AI Visibility is the discipline of being recognized, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The concept and its five-layer model were developed by Joeri Billast." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Visibility is the discipline of being recognized, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The concept and its five-layer model were developed by Joeri Billast."
+          }
         },
         {
           "@type": "Question",
           "name": "What is AI Share of Voice?",
-          "acceptedAnswer": { "@type": "Answer", "text": "AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce. The term was coined by Joeri Billast." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce. The term was coined by Joeri Billast."
+          }
         },
         {
           "@type": "Question",
           "name": "What are the five layers of AI Visibility?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The five layers are foundational SEO, Answer Engine Optimization, Generative Engine Optimization, AI Identity Optimization and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The five layers are foundational SEO, Answer Engine Optimization, Generative Engine Optimization, AI Identity Optimization and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast."
+          }
         },
         {
           "@type": "Question",
           "name": "What is the difference between SEO and AI Visibility?",
-          "acceptedAnswer": { "@type": "Answer", "text": "SEO optimizes to rank in a list of links a person clicks through. AI Visibility optimizes to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO optimizes to rank in a list of links a person clicks through. AI Visibility optimizes to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I make my brand citable by AI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Work the five layers in order. Make sure AI crawlers can reach your site, write claims in clean liftable sentences, define yourself as a structured entity referenced consistently across your properties, deliberately shape the description models hold of you and earn verifiable trust signals such as named clients and real endorsements. Trust is the only moat AI cannot scale, which is why it sits at the top of the model." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work the five layers in order. Make sure AI crawlers can reach your site, write claims in clean liftable sentences, define yourself as a structured entity referenced consistently across your properties, deliberately shape the description models hold of you and earn verifiable trust signals such as named clients and real endorsements. Trust is the only moat AI cannot scale, which is why it sits at the top of the model."
+          }
         }
       ]
     }

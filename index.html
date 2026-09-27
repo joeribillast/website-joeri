@@ -536,12 +536,30 @@
       "name": "Joeri Billast",
       "givenName": "Joeri",
       "familyName": "Billast",
-      "jobTitle": ["Fractional CMO", "AI Visibility Strategist", "Author", "Keynote Speaker"],
-      "description": "Joeri Billast is a Belgium-born Fractional CMO, AI Visibility Strategist and author of The Future CMO (2025) and The 5K Challenge for Solopreneurs (2022). He is also a contributing author to The Most Amazing Marketing Book Ever by Mark Schaefer and The Content Entrepreneur by Joe Pulizzi. Based in Sintra, near Lisbon, he advises founders and executive teams across Europe, North America and Asia on marketing leadership, brand positioning and visibility in AI-driven markets. He also created Sintra Synergies, a curated retreat for marketing and AI leadership.",
-      "nationality": "Belgian",
-      "url": "https://joeribillast.com",
-      "mainEntityOfPage": "https://joeribillast.com",
-      "image": "https://webdrie.net/wp-content/uploads/2026/09/Joeri-on-LinkedIn.png",
+      "url": "https://joeribillast.com/",
+      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
+      "jobTitle": "Fractional CMO and AI Visibility Strategist",
+      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
+      "nationality": {
+        "@type": "Country",
+        "name": "Belgium"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Sintra, Portugal"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Efficado"
+      },
+      "knowsAbout": [
+        "Marketing leadership",
+        "AI visibility",
+        "Generative engine optimization",
+        "Brand positioning",
+        "Fractional CMO",
+        "Trust in marketing"
+      ],
       "sameAs": [
         "https://www.linkedin.com/in/joeribillast",
         "https://www.youtube.com/c/JoeriBillast",
@@ -555,26 +573,17 @@
         "https://www.amazon.com/author/joeribillast",
         "https://webdrie.net"
       ],
-      "knowsAbout": [
-        "Fractional CMO leadership",
-        "AI Visibility Strategy",
-        "Generative Engine Optimization",
-        "Answer Engine Optimization",
-        "Brand positioning",
-        "Marketing leadership",
-        "Executive thought leadership",
-        "AI-driven discovery systems",
-        "Generative search",
-        "Marketing leadership in AI environments"
-      ],
-      "homeLocation": {
-        "@type": "Place",
-        "address": { "@type": "PostalAddress", "addressCountry": "PT" }
-      },
+      "mainEntityOfPage": "https://joeribillast.com",
       "subjectOf": [
-        { "@id": "https://joeribillast.com/#tedx-talk" },
-        { "@id": "https://joeribillast.com/future-cmo#article" },
-        { "@id": "https://joeribillast.com/ai-visibility#article" }
+        {
+          "@id": "https://joeribillast.com/#tedx-talk"
+        },
+        {
+          "@id": "https://joeribillast.com/future-cmo#article"
+        },
+        {
+          "@id": "https://joeribillast.com/ai-visibility#article"
+        }
       ]
     },
     {
@@ -582,17 +591,48 @@
       "@id": "https://joeribillast.com/#website",
       "name": "Joeri Billast",
       "url": "https://joeribillast.com",
-      "publisher": { "@id": "https://joeribillast.com/#person" },
+      "publisher": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "inLanguage": "en"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://joeribillast.com/#profilepage",
+      "url": "https://joeribillast.com/",
+      "name": "Joeri Billast | Fractional CMO and AI Visibility Strategist",
+      "mainEntity": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://joeribillast.com/#website"
+      }
     },
     {
       "@type": "Book",
       "@id": "https://joeribillast.com/#future-cmo-book",
       "name": "The Future CMO",
-      "author": { "@id": "https://joeribillast.com/#person" },
-      "about": "Marketing leadership in the age of artificial intelligence",
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "datePublished": "2025",
-      "url": "https://www.amazon.com/Future-CMO-Modern-Trust-Visibility-ebook/dp/B0FNLBZGB9/",
+      "inLanguage": "en",
+      "url": "https://www.amazon.com/Future-CMO-Modern-Trust-Visibility-ebook/dp/B0FNLBZGB9",
+      "workExample": [
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/EBook",
+          "isbn": "9789464516234",
+          "datePublished": "2025"
+        },
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/Paperback",
+          "isbn": "9789464516241",
+          "datePublished": "2025"
+        }
+      ],
+      "about": "Marketing leadership in the age of artificial intelligence",
       "review": {
         "@type": "Review",
         "author": {
@@ -611,7 +651,9 @@
       "@type": "Book",
       "@id": "https://joeribillast.com/#5k-challenge-book",
       "name": "The 5K Challenge for Solopreneurs",
-      "author": { "@id": "https://joeribillast.com/#person" },
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "about": "How solopreneurs can grow revenue through smart marketing without spending more",
       "datePublished": "2022",
       "url": "https://www.amazon.com/5K-Challenge-Solopreneurs-through-Spending-ebook/dp/B0B8BXR7NF/"
@@ -621,8 +663,14 @@
       "@id": "https://www.cmo-stories.com/#podcast",
       "name": "Web3 CMO Stories",
       "url": "https://www.cmo-stories.com",
-      "author": { "@id": "https://joeribillast.com/#person" },
-      "description": "Web3 CMO Stories is a podcast hosted by Joeri Billast that explores the intersection of Web3, AI and marketing leadership. The show ranks in the top 5% of podcasts globally with more than 300 episodes published. Past guests include Gary Vaynerchuk and Chris Do.",
+      "webFeed": "https://feeds.buzzsprout.com/1903080.rss",
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "creator": {
+        "@id": "https://joeribillast.com/#person"
+      },
+      "description": "The podcast for marketing leaders and founders building in the next web, where blockchain, AI and immersive technology meet. More than 300 episodes, ranked in the top 5% globally.",
       "inLanguage": "en"
     },
     {
@@ -640,7 +688,9 @@
           "addressCountry": "PT"
         }
       },
-      "organizer": { "@id": "https://joeribillast.com/#person" }
+      "organizer": {
+        "@id": "https://joeribillast.com/#person"
+      }
     },
     {
       "@type": "VideoObject",
@@ -655,15 +705,32 @@
         "@type": "Organization",
         "name": "TEDxChiado"
       },
-      "author": { "@id": "https://joeribillast.com/#person" },
+      "author": {
+        "@id": "https://joeribillast.com/#person"
+      },
       "about": [
-        {"@type": "Thing", "name": "AI Visibility"},
-        {"@type": "Thing", "name": "Marketing Leadership"},
-        {"@type": "Thing", "name": "Brand Trust"}
+        {
+          "@type": "Thing",
+          "name": "AI Visibility"
+        },
+        {
+          "@type": "Thing",
+          "name": "Marketing Leadership"
+        },
+        {
+          "@type": "Thing",
+          "name": "Brand Trust"
+        }
       ],
       "mentions": [
-        {"@id": "https://joeribillast.com/#future-cmo-book"},
-        {"@type": "Organization", "name": "Edelman", "url": "https://www.edelman.com/trust"}
+        {
+          "@id": "https://joeribillast.com/#future-cmo-book"
+        },
+        {
+          "@type": "Organization",
+          "name": "Edelman",
+          "url": "https://www.edelman.com/trust"
+        }
       ],
       "locationCreated": {
         "@type": "Place",
