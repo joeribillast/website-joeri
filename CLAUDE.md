@@ -282,9 +282,8 @@ Rules:
 - Social preview per page: a dedicated 1200×630 JPEG, declared with
   `og:image:width`, `og:image:height` and `og:image:alt`
 
-> **Pending:** `index.html` still uses the older `.tedx-video` class name for this same
-> component. Rename it to `.video-embed` (CSS, markup and the JS selector) so the component
-> has one name across the site.
+> **Done (2026-10-18):** `index.html` now uses `.video-embed` (CSS, markup and JS selector)
+> and loads the player from `youtube-nocookie.com`, like the rest of the site.
 
 ### Form Inputs
 
@@ -314,20 +313,29 @@ active → color: #5b3fcf; border-bottom: 2px solid #5b3fcf;
 hover → color: #5b3fcf;
 ```
 
-Nav items (all pages, same order): What I do · Perspective · Speaking · Credentials · [Request an introduction]
+Nav items (all pages, same order): What I do · How I work · Speaking · Writing · FAQ · [Discuss an engagement]
+
+Targets: What I do → `/#what-i-do`, How I work → `/#how-i-work`, Speaking → `/speaking`,
+Writing → `/#writing`, FAQ → the page's own `#faq`. The nav button is the short form of the
+site-wide primary CTA "Discuss a strategic engagement" and links to the contact form; phones
+show "Get in touch". Old homepage anchors (`#positioning`, `#perspective`, `#domains`,
+`#credentials`, `#tedx`, `#perspectives`) are kept as `.anchor` aliases so older links still land.
 
 Markup: `.nav__inner` holds the wordmark and a `.nav__right` flex row containing
 `<nav><ul class="nav__links" id="primary-nav">`, the CTA `<a class="btn btn--ghost nav__cta-btn">`
 and `<button class="nav__toggle" hidden>`. The CTA lives outside the list so it can stay in the
 bar while the list collapses.
 
-Mobile (≤720px): the text links collapse into a disclosure panel that drops below the bar.
-The bar keeps the wordmark, the CTA (short label "Get in touch" via `.nav__cta-short`) and a
-hamburger toggle. Never hide `.nav__links` outright, that leaves the page with no navigation.
+Compact bar (≤860px, tablet and phone): the text links collapse into a disclosure panel that
+drops below the bar. The bar keeps the wordmark, the CTA (short label "Get in touch" via
+`.nav__cta-short`) and a hamburger toggle. Below 860px the five links plus the CTA no longer fit
+on one line, so the full row is only shown above it. At ≤720px the bar also switches to mobile
+padding and the smaller wordmark. Never hide `.nav__links` outright, that leaves the page with
+no navigation.
 
 ```css
 @media (max-width: 900px) { .nav__links { gap: 22px; } .nav__right { gap: 22px; } }
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav__toggle { display: inline-flex; }        /* 40px, 1px border, radius-standard */
   .nav__cta-long { display: none; }
   .nav__cta-short { display: inline; }
@@ -337,14 +345,16 @@ hamburger toggle. Never hide `.nav__links` outright, that leaves the page with n
     background: var(--color-white);             /* opaque: the bar's backdrop-filter bleeds */
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-3);
+    padding: 2px var(--pad-x-desktop) 10px;     /* var(--pad-x-mobile) at ≤720px */
   }
   .nav--js .nav__links[data-open="false"] { display: none; }
 }
+@media (max-width: 720px) { /* mobile padding, 28px icon, 13px wordmark */ }
 ```
 
 Progressive enhancement: the toggle ships with `hidden` and the panel only collapses once the
 script adds `.nav--js`. Without JavaScript the links stay visible and stack. The script also
-closes the panel on link click, on Escape, and above 720px.
+closes the panel on link click, on Escape, and above 860px.
 
 The wordmark needs `flex: 0 0 auto` and `white-space: nowrap`, otherwise it wraps in the
 tighter mobile bar. `.footer__links` needs `flex-wrap: wrap`, otherwise the footer forces
@@ -417,6 +427,8 @@ padding: 96px 48px;
 - **No emoji** in UI or copy.
 - **No exclamation marks** in body copy.
 - **CTAs**: Direct and action-forward — "Get in touch" / "View my work" / "Book a keynote"
+- **Primary CTA (site-wide)**: "Discuss a strategic engagement" → contact form; second route
+  "Book a keynote" → `/speaking`. One solid (primary) button per section; the second route is a ghost button.
 - **Section eyebrows**: 11px / 500 / uppercase / `#9ca3af` — use to orient the reader before headings
 
 ---
@@ -427,13 +439,27 @@ padding: 96px 48px;
 Nav (sticky, blur)
   └── Logo (full lockup) · Work · About · Writing · Contact · [Get in touch]
 
-Home
-  └── Hero (white, 120px padding)
-        Logo icon · Available badge · Name · Tagline · Description · CTAs
-  └── Feature Section (off-white #fafafa, 96px padding)
-        Eyebrow · H2 · 3-column project cards
-  └── Dark Section (#2d1b69, 96px padding)
-        2-column: headline/copy/CTAs + 3 capability cards
+Home (homepage v2, 2026-10-18; sections alternate white / off-white, CTA dark)
+  └── 1 Hero: photo · eyebrow · H1 "Trust is the only thing AI cannot scale." · subhead ·
+        [Discuss a strategic engagement] [See how I work] · credibility line (3 stacked lines) ·
+        Kotler quote (book wording) directly under the hero
+  └── 2 When companies bring me in (#situations): 3 rows, statement left / text right
+  └── 3 From marketing activity to business value (#what-i-do): Value Map as 3 text blocks
+        (Perception · Trust · Outcome, with signals) · link to /future-cmo
+  └── 4 How I work (#how-i-work): Fractional CMO offer + Benny Willen quote · 90-day steps
+        (2×2) · focused engagements with Matt Wilkinson quote under the diagnostic
+  └── 5 When I'm not the right partner (#fit): dotted rows
+  └── 6 Why work with me (#why-me): 6 reasons (2-col) · client cases as cards
+        (Situation · What I did · Result) · Ayu Sutarga and Yvan Van Campenhout quotes
+  └── 7 Speaking (#speaking): line · stages list · TEDx video facade · Schaefer quote ·
+        [Book a keynote] · podcast and retreat one-liners
+  └── 8 Recent writing (#writing) · 9 Dark CTA (#contact) · 10 FAQ (#faq)
+
+Homepage patterns (page-level classes in index.html, built from existing tokens):
+`.quote` (purple left rule, italic, `cite` + optional `.quote__source` link), `.case` (white
+card, shadow-1, 3-column `dl` that stacks under 860px), `.value-block`, `.situation`,
+`.steps` (CSS-counter numbers in purple). Emphasis in running text is weight 400 + heading
+colour, never bold. Headings use `text-wrap: balance`.
 
 /speaking → Speaker page (white → off-white alternating)
       Hero: eyebrow · H1 premise · lede · [Check availability] [Watch my TEDx talk] ·

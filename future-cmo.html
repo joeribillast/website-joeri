@@ -103,6 +103,29 @@
   .nav__toggle[aria-expanded="true"] .nav__icon-close { display: block; }
   .nav__cta-short { display: none; }
 
+  @media (max-width: 860px) {
+    /* Compact bar from tablet width down: the full link row does not fit below 860px */
+    .nav__right { gap: 8px; }
+    .nav__toggle { display: inline-flex; }
+    .nav__right .btn { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
+    .nav__cta-long { display: none; }
+    .nav__cta-short { display: inline; }
+    .nav--js .nav__links {
+      position: absolute;
+      top: var(--nav-height); left: 0; right: 0;
+      flex-direction: column; align-items: stretch;
+      gap: 0;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-3);
+      padding: 2px var(--pad-x-desktop) 10px;
+    }
+    .nav--js .nav__links[data-open="false"] { display: none; }
+    .nav__links > li { border-bottom: 1px solid var(--color-border-light); }
+    .nav__links > li:last-child { border-bottom: 0; }
+    .nav__links a { display: block; padding: 15px 0; font-size: 15px; }
+  }
+
   @media (max-width: 720px) {
     .nav__inner { padding: 0 var(--pad-x-mobile); gap: 10px; }
     .wordmark { gap: 9px; }
@@ -364,57 +387,7 @@
       "@type": "Person",
       "@id": "https://joeribillast.com/#person",
       "name": "Joeri Billast",
-      "givenName": "Joeri",
-      "familyName": "Billast",
-      "url": "https://joeribillast.com/",
-      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
-      "jobTitle": "Fractional CMO and AI Visibility Strategist",
-      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
-      "nationality": {
-        "@type": "Country",
-        "name": "Belgium"
-      },
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Sintra, Portugal"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Efficado"
-      },
-      "knowsAbout": [
-        "Marketing leadership",
-        "AI visibility",
-        "Generative engine optimization",
-        "Brand positioning",
-        "Fractional CMO",
-        "Trust in marketing"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/joeribillast",
-        "https://www.youtube.com/c/JoeriBillast",
-        "https://x.com/joeribillast",
-        "https://www.instagram.com/joeribillast",
-        "https://www.facebook.com/joeri.billast",
-        "https://pinterest.com/joeribillast",
-        "https://www.tiktok.com/@joeribillast",
-        "https://www.tiktok.com/@aiwithjoeri",
-        "https://www.cmo-stories.com",
-        "https://www.amazon.com/author/joeribillast",
-        "https://webdrie.net"
-      ],
-      "mainEntityOfPage": "https://joeribillast.com",
-      "subjectOf": [
-        {
-          "@id": "https://joeribillast.com/#tedx-talk"
-        },
-        {
-          "@id": "https://joeribillast.com/future-cmo#article"
-        },
-        {
-          "@id": "https://joeribillast.com/ai-visibility#article"
-        }
-      ]
+      "url": "https://joeribillast.com"
     },
     {
       "@type": "WebSite",
@@ -454,7 +427,7 @@
       ],
       "mentions": [
         {
-          "@id": "https://joeribillast.com/#future-cmo-book"
+          "@id": "https://joeribillast.com/#book-future-cmo-paperback"
         },
         {
           "@id": "https://joeribillast.com/#tedx-talk"
@@ -476,8 +449,8 @@
         "https://joeribillast.com/assets/billboard.jpg",
         "https://joeribillast.com/assets/joeri-billast-philip-kotler.jpg"
       ],
-      "datePublished": "2026-06-19",
-      "dateModified": "2026-09-27",
+      "datePublished": "2026-06-19T00:00:00+01:00",
+      "dateModified": "2026-10-18T00:00:00+01:00",
       "inLanguage": "en"
     },
     {
@@ -496,7 +469,7 @@
           "name": "What is the Future CMO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Future CMO is a marketing leader who optimizes for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book The Future CMO by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat."
+            "text": "The Future CMO is a marketing leader who optimises for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book The Future CMO by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat."
           }
         },
         {
@@ -553,14 +526,14 @@
       <div class="nav__right">
         <nav aria-label="Primary">
         <ul class="nav__links" id="primary-nav" data-open="false">
-          <li><a href="/#positioning">What I do</a></li>
-          <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/#what-i-do">What I do</a></li>
+          <li><a href="/#how-i-work">How I work</a></li>
           <li><a href="/speaking">Speaking</a></li>
-          <li><a href="/#credentials">Credentials</a></li>
+          <li><a href="/#writing">Writing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         </nav>
-        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Request an introduction</span><span class="nav__cta-short">Get in touch</span></a>
+        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Discuss an engagement</span><span class="nav__cta-short">Get in touch</span></a>
         <button type="button" class="nav__toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" hidden>
           <svg class="nav__icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <svg class="nav__icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -594,7 +567,7 @@
 
         <h2>The billboard in Cairo</h2>
         <p>In December 2024 my face was on a billboard in fifteen locations across Cairo, a city of 22 million people. Next to it was the face of Philip Kotler, the man who turned marketing into an academic discipline and whose textbook has been the standard in business schools since 1967. We were both speaking at the same conference. He joined by video. I was there in person.</p>
-        <p>I am not telling you this for the vanity of it. I am telling you because of what happened after. I asked Kotler to come on my podcast, <em>Web3 CMO Stories</em>, and he said yes. Drawing on Gautam Mahajan's book on zero complaints, he told my listeners that CMOs should want every complaint to come up to them on a list every week, and that a company might even appoint a chief problem officer. In other words, the CMO should own every customer problem, wherever in the company it starts. When the person who defined the discipline argues that, you stop optimizing and you start asking what you missed. My conclusion was that the marketing leadership role is not evolving. It is undergoing a reconstruction.</p>
+        <p>I am not telling you this for the vanity of it. I am telling you because of what happened after. I asked Kotler to come on my podcast, <em>Web3 CMO Stories</em>, and he said yes. Drawing on Gautam Mahajan's book on zero complaints, he told my listeners that CMOs should want every complaint to come up to them on a list every week, and that a company might even appoint a chief problem officer. In other words, the CMO should own every customer problem, wherever in the company it starts. When the person who defined the discipline argues that, you stop optimising and you start asking what you missed. My conclusion was that the marketing leadership role is not evolving. It is undergoing a reconstruction.</p>
 
         <figure class="article-body__figure">
           <img
@@ -610,14 +583,14 @@
         <p>This page is about what we missed, and what the future CMO does instead.</p>
 
         <h2>The collapse nobody is pricing in</h2>
-        <p>Here is the uncomfortable part. AI did not just democratize marketing competence. It commoditized it.</p>
+        <p>Here is the uncomfortable part. AI did not just democratise marketing competence. It commoditised it.</p>
         <p>Ten years ago there was a real gap between a good marketer and an average one. The good one wrote sharper copy, built better campaigns, found cleaner positioning. That craft was a moat. Today a junior with ChatGPT produces technically correct copy in five minutes, and so does a senior with the same tools. The gap between good and average has collapsed in about twelve months.</p>
         <p>Most marketing leadership is still treating this as a tooling problem. Which prompts, which stack, how much to automate. Those are the wrong questions, because everyone is already working on them, and when everyone works on the same questions, differentiation disappears. The problem was never that AI makes humans useless. The problem is that AI makes sameness easy, and sameness is the enemy of trust.</p>
-        <p>This is not only my read. Lippincott's 2026 CMO Outlook, a global study of more than 500 marketing leaders, found that as marketers pour money into AI implementation they are quietly defunding the very foundations that determine how AI understands and surfaces a brand: web experience, thought leadership content, customer experience. They are automating output while starving the things that make a brand worth recommending. That is the gap this book closes.</p>
+        <p>This is not only my read. <a href="https://www.bloombergmedia.com/blog/bloomberg-media-and-lippincott-unveil-new-research-on-the-evolving-role-of-the-cmo/" target="_blank" rel="noopener">Lippincott's CMO Outlook 2026</a>, a global study of more than 500 marketing leaders developed with Bloomberg Media, found investment flowing toward AI technologies while funding moves away from websites and content creation, the very foundations that shape how AI understands and surfaces a brand. Marketers are automating output while starving the things that make a brand worth recommending. That is the gap this book closes.</p>
 
         <h2>Why the moat moved from output to meaning</h2>
         <p>The old agency moat was output. More posts, more campaigns, more channels, more speed. That worked when production was hard. Production is no longer the bottleneck. The bottleneck now is meaning.</p>
-        <p>Can your client say something that actually matters. Can their market recognize their point of view. Can a stranger verify their credibility before the first sales conversation. Those are not creative questions, they are business questions, and clients will not pay premium fees for output that a model can generate. They will pay for clarity, for judgment and for trust.</p>
+        <p>Can your client say something that actually matters. Can their market recognise their point of view. Can a stranger verify their credibility before the first sales conversation. Those are not creative questions, they are business questions, and clients will not pay premium fees for output that a model can generate. They will pay for clarity, for judgment and for trust.</p>
         <p>So the new moat looks different from what most teams are still selling. It is a defensible point of view, trust signals a customer can verify, a community that compounds and strategic judgment rather than volume.</p>
 
         <h2>The three shifts of the future CMO</h2>
@@ -625,7 +598,7 @@
 
         <h3>Shift one: from attention to trust</h3>
         <p>For more than a decade marketing has been obsessed with attention. Reach, impressions, views, clicks. Attention still matters, but it is no longer the hard part. The hard part is what happens after. Do people believe you, stay, refer you, pay a premium and defend you when something goes wrong. That is where the business value sits.</p>
-        <p>You can get attention and still have no trust. You can go viral and still not matter. And trust is now measurable. Trusted brands command roughly a 15 to 20 percent price premium over less trusted competitors, a range backed by BrandSpark's consumer trust research and echoed in Edelman's brand trust data. Customers who arrive through a referral, which is trust made visible, carry around 16 to 25 percent higher lifetime value than customers acquired through other channels, according to research from the Wharton School. And those referred customers are about four times more likely to refer others in turn, which is how trust compounds rather than just converts. Those are not marketing metrics. They are business metrics, and most marketing dashboards do not track a single one of them.</p>
+        <p>You can get attention and still have no trust. You can go viral and still not matter. And trust is now measurable. Trusted brands can command a price premium of up to 30 percent over untrusted competitors, according to <a href="https://brandspark.com/brand-trust" target="_blank" rel="noopener">BrandSpark's multi-country consumer trust research</a>. <a href="https://www.edelman.com/sites/g/files/aatuss191/files/2025-06/2025%20Edelman%20Trust%20Barometer%20Special%20Report%20Brand%20Trust,%20From%20We%20to%20Me%20(1).pdf" target="_blank" rel="noopener">Edelman's 2025 Trust Barometer special report on brand trust</a>, covering 15 markets, ranks trust in the company behind a brand alongside cost and quality as a purchase consideration. Customers who arrive through a referral, which is trust made visible, are worth more too: in a <a href="https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/Schmitt-Skiera-vandenBulte-2011-Referral-Programs-Customer-Value.pdf" target="_blank" rel="noopener">study of bank customers published in the Journal of Marketing</a>, Philipp Schmitt, Bernd Skiera and Wharton's Christophe Van den Bulte found referred customers were 16 to 25 percent more valuable than comparable customers, depending on how value is measured. These are business metrics, and most marketing dashboards do not track a single one of them.</p>
         <p>That is why I built the Trust ROI Calculator into the book. It turns trust from a vague virtue into a line your CFO can read. You map where trust signals appear across your touchpoints, measure trust through satisfaction, retention and referral velocity, calculate your pricing power against competitors, track how fast you recover from a reputation incident and link all of it to revenue on the same dashboard the finance team already uses.</p>
 
         <h3>Shift two: from content volume to point of view</h3>
@@ -640,15 +613,15 @@
         <p>That is why the role itself is changing. The brand guardian becomes a Chief Value Officer. The campaign manager becomes a community architect. The creative director becomes a trust architect. The tool operator becomes a strategic translator. These are not title changes. They are a re-conceptualization of what the role does. This is what I mean by reconstruction.</p>
 
         <h2>What a Chief Value Officer actually is</h2>
-        <p>A Chief Value Officer is a marketing leader who is accountable for the value a brand earns and can prove, not the attention it rents. Where the traditional CMO optimized for reach and output, the Chief Value Officer optimizes for trust, defensible positioning and community, and ties those to financial outcomes the rest of the C-suite already respects. It is the role marketing leadership grows into when content becomes infinite and trust becomes the filter.</p>
-        <p>There is a deeper logic here that explains why this is a reconstruction and not a promotion. A CEO exists to create value for the organization as a whole. The Chief Value Officer applies that same logic to the part of the business where value is most visibly created and captured, which is the surface where a brand meets its market. That is why this is not an upgraded marketing title. It is a role whose core question, how do we create and prove value while using resources well, is the same question the CEO is accountable for. When you frame the role that way, it stops reporting to value and starts owning it.</p>
+        <p>A Chief Value Officer is a marketing leader who is accountable for the value a brand earns and can prove, not the attention it rents. Where the traditional CMO optimised for reach and output, the Chief Value Officer optimises for trust, defensible positioning and community, and ties those to financial outcomes the rest of the C-suite already respects. It is the role marketing leadership grows into when content becomes infinite and trust becomes the filter.</p>
+        <p>There is a deeper logic here that explains why this is a reconstruction and not a promotion. A CEO exists to create value for the organisation as a whole. The Chief Value Officer applies that same logic to the part of the business where value is most visibly created and captured, which is the surface where a brand meets its market. That is why this is not an upgraded marketing title. It is a role whose core question, how do we create and prove value while using resources well, is the same question the CEO is accountable for. When you frame the role that way, it stops reporting to value and starts owning it.</p>
 
         <h2>The four minute test: the AI Visibility Check</h2>
         <p>Here is something you can run on yourself, a brand or a client this week. Four questions.</p>
-        <p>First, is your brand citable by AI. When ChatGPT, Claude or Perplexity answer questions in your category, does your name appear. Gartner predicts that by 2028 around 70 percent of B2B research will start with an AI tool rather than Google. If you are not citable there, you do not exist for those buyers. The operational side of this is its own discipline, and I have written the full playbook separately on <a href="/ai-visibility">how to make your brand citable by AI</a>.</p>
+        <p>First, is your brand citable by AI. When ChatGPT, Claude or Perplexity answer questions in your category, does your name appear. If you are not citable there, you do not exist for the buyers who start their research with AI. The operational side of this is its own discipline, and I have written the full playbook separately on <a href="/ai-visibility">how to make your brand citable by AI</a>.</p>
         <p>Second, do you have a defensible point of view. Same logo test as before. If a competitor could swap their logo onto your content and it would still feel theirs, what you have is not a point of view, it is competent noise.</p>
         <p>Third, can a stranger verify your trust signals in 30 seconds. Not three clicks deep on an About page. At the surface. Named clients, real testimonials, endorsements from people who matter.</p>
-        <p>Fourth, are you optimizing for trust or for attention. What gets celebrated internally, the viral post or the quiet client outcome that took six months. What you celebrate, you get more of.</p>
+        <p>Fourth, are you optimising for trust or for attention. What gets celebrated internally, the viral post or the quiet client outcome that took six months. What you celebrate, you get more of.</p>
         <p>Honest answers to those four questions give you a radically different priority list than the one most marketing teams are working from right now.</p>
 
         <h2>Where this came from, and where it is going</h2>
@@ -681,7 +654,7 @@
         <div class="faq-list">
           <article class="faq-item">
             <h3>What is the Future CMO?</h3>
-            <p>The Future CMO is a marketing leader who optimizes for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book <em>The Future CMO</em> by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat.</p>
+            <p>The Future CMO is a marketing leader who optimises for trust, defensible positioning and community rather than attention and output volume. The concept comes from the book <em>The Future CMO</em> by Joeri Billast, endorsed by Philip Kotler, and argues that as AI makes content infinite, trust becomes the scarce resource and the real moat.</p>
           </article>
 
           <article class="faq-item">
@@ -714,7 +687,7 @@
         <h2 id="cta-title" class="t-h2">If this thesis matches a problem you are working on, let's talk.</h2>
         <p>For executive teams considering a strategic engagement, advisory partnership or a keynote.</p>
         <div class="cta-dark__buttons">
-          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a>
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Discuss a strategic engagement</a>
           <a href="https://sintrasynergies.com" class="btn btn--ghost-dark" target="_blank" rel="noopener">Explore Sintra Synergies</a>
         </div>
       </div>
@@ -755,7 +728,7 @@
       var id = container.dataset.videoId;
       if (!id) return;
       var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
       iframe.title = btn.getAttribute('aria-label') || 'YouTube video';
       iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
       iframe.setAttribute('allowfullscreen', '');
@@ -784,7 +757,7 @@
     });
     list.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 720) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 860) setOpen(false); });
   })();
 </script>
 </body>

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Keynote Speaker on AI and Trust | Joeri Billast</title>
-<meta name="description" content="Joeri Billast is a TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditized competence. Trust is the only thing it cannot scale. Book Joeri for conferences, executive offsites and leadership events.">
+<meta name="description" content="Joeri Billast is a TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditised competence. Trust is the only thing it cannot scale. Book Joeri for conferences, executive offsites and leadership events.">
 
 <meta name="author" content="Joeri Billast">
 <link rel="canonical" href="https://joeribillast.com/speaking">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Keynote Speaker on AI and Trust | Joeri Billast">
-<meta property="og:description" content="TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditized competence. Trust is the only thing it cannot scale.">
+<meta property="og:description" content="TEDx and international keynote speaker on marketing leadership in the AI era. AI commoditised competence. Trust is the only thing it cannot scale.">
 <meta property="og:url" content="https://joeribillast.com/speaking">
 <meta property="og:image" content="https://joeribillast.com/assets/og-speaking.jpg">
 <meta property="og:image:width" content="1200">
@@ -114,6 +114,29 @@
   .nav__cta-short { display: none; }
 
   @media (max-width: 900px) { .nav__links { gap: 22px; } .nav__right { gap: 22px; } }
+  @media (max-width: 860px) {
+    /* Compact bar from tablet width down: the full link row does not fit below 860px */
+    .nav__right { gap: 8px; }
+    .nav__toggle { display: inline-flex; }
+    .nav__right .btn { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
+    .nav__cta-long { display: none; }
+    .nav__cta-short { display: inline; }
+    .nav--js .nav__links {
+      position: absolute;
+      top: var(--nav-height); left: 0; right: 0;
+      flex-direction: column; align-items: stretch;
+      gap: 0;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-3);
+      padding: 2px var(--pad-x-desktop) 10px;
+    }
+    .nav--js .nav__links[data-open="false"] { display: none; }
+    .nav__links > li { border-bottom: 1px solid var(--color-border-light); }
+    .nav__links > li:last-child { border-bottom: 0; }
+    .nav__links a { display: block; padding: 15px 0; font-size: 15px; }
+  }
+
   @media (max-width: 720px) {
     .nav__inner { padding: 0 var(--pad-x-mobile); gap: 10px; }
     .wordmark { gap: 9px; }
@@ -571,57 +594,7 @@
       "@type": "Person",
       "@id": "https://joeribillast.com/#person",
       "name": "Joeri Billast",
-      "givenName": "Joeri",
-      "familyName": "Billast",
-      "url": "https://joeribillast.com/",
-      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
-      "jobTitle": "Fractional CMO and AI Visibility Strategist",
-      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
-      "nationality": {
-        "@type": "Country",
-        "name": "Belgium"
-      },
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Sintra, Portugal"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Efficado"
-      },
-      "knowsAbout": [
-        "Marketing leadership",
-        "AI visibility",
-        "Generative engine optimization",
-        "Brand positioning",
-        "Fractional CMO",
-        "Trust in marketing"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/joeribillast",
-        "https://www.youtube.com/c/JoeriBillast",
-        "https://x.com/joeribillast",
-        "https://www.instagram.com/joeribillast",
-        "https://www.facebook.com/joeri.billast",
-        "https://pinterest.com/joeribillast",
-        "https://www.tiktok.com/@joeribillast",
-        "https://www.tiktok.com/@aiwithjoeri",
-        "https://www.cmo-stories.com",
-        "https://www.amazon.com/author/joeribillast",
-        "https://webdrie.net"
-      ],
-      "mainEntityOfPage": "https://joeribillast.com",
-      "subjectOf": [
-        {
-          "@id": "https://joeribillast.com/#tedx-talk"
-        },
-        {
-          "@id": "https://joeribillast.com/future-cmo#article"
-        },
-        {
-          "@id": "https://joeribillast.com/ai-visibility#article"
-        }
-      ]
+      "url": "https://joeribillast.com"
     },
     {
       "@type": "WebSite",
@@ -672,7 +645,7 @@
       "description": "Speaker reel of Joeri Billast, international keynote speaker on marketing leadership in the age of artificial intelligence. Featuring TEDxChiado in Lisbon, Marketing+ Conference in Cairo, NEXT Summit in Valletta and DGT Innovation in Oeiras.",
       "thumbnailUrl": "https://joeribillast.com/assets/speaking-reel-poster-1600.jpg",
       "uploadDate": "2026-08-21T00:00:00+01:00",
-      "transcript": "AI didn't just democratize competence, it commoditized it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot. The question is, what do you want to be trusted for when everything else can be generated?",
+      "transcript": "AI didn't just democratise competence, it commoditised it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot. The question is, what do you want to be trusted for when everything else can be generated?",
       "contentUrl": "https://www.youtube.com/watch?v=SileqsRbhAg",
       "embedUrl": "https://www.youtube.com/embed/SileqsRbhAg",
       "author": {
@@ -701,7 +674,7 @@
       "@type": "VideoObject",
       "@id": "https://joeribillast.com/#tedx-talk",
       "name": "Trust is the only thing AI cannot scale",
-      "description": "TEDxChiado talk by Joeri Billast on why trust is the scarce resource in the age of generative AI, and what marketing leaders should optimize for instead.",
+      "description": "TEDxChiado talk by Joeri Billast on why trust is the scarce resource in the age of generative AI, and what marketing leaders should optimise for instead.",
       "thumbnailUrl": "https://joeribillast.com/assets/speaking-tedx-poster-1600.jpg",
       "uploadDate": "2026-05-11T00:00:00+01:00",
       "contentUrl": "https://www.youtube.com/watch?v=rUFx4FMBU-Q",
@@ -733,7 +706,7 @@
       },
       "audience": {
         "@type": "Audience",
-        "audienceType": "Conference organizers, executive teams, marketing leadership events"
+        "audienceType": "Conference organisers, executive teams, marketing leadership events"
       }
     },
     {
@@ -745,7 +718,7 @@
           "name": "What does Joeri Billast speak about?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditized competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand and how organizations stay legible and citable in AI-mediated markets."
+            "text": "Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditised competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand and how organisations stay legible and citable in AI-mediated markets."
           }
         },
         {
@@ -761,7 +734,7 @@
           "name": "In which languages does Joeri Billast speak?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions."
+            "text": "Keynotes and panel moderation in English, Dutch and French. He also understands German and Portuguese in conversation."
           }
         },
         {
@@ -777,7 +750,7 @@
           "name": "Does Joeri Billast moderate panels and host podcasts at events?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the Web3 CMO Stories podcast from conferences and events. A live-audience recording format can be developed with the organizer."
+            "text": "Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the Web3 CMO Stories podcast from conferences and events. A live-audience recording format can be developed with the organiser."
           }
         },
         {
@@ -810,14 +783,14 @@
       <div class="nav__right">
         <nav aria-label="Primary">
         <ul class="nav__links" id="primary-nav" data-open="false">
-          <li><a href="/#positioning">What I do</a></li>
-          <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/#what-i-do">What I do</a></li>
+          <li><a href="/#how-i-work">How I work</a></li>
           <li><a href="/speaking" aria-current="page">Speaking</a></li>
-          <li><a href="/#credentials">Credentials</a></li>
+          <li><a href="/#writing">Writing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         </nav>
-        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Request an introduction</span><span class="nav__cta-short">Get in touch</span></a>
+        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Discuss an engagement</span><span class="nav__cta-short">Get in touch</span></a>
         <button type="button" class="nav__toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" hidden>
           <svg class="nav__icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <svg class="nav__icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -833,7 +806,7 @@
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Keynote speaking</span></div>
 
-        <h1 id="speaker-title" class="t-hero">AI commoditized competence. Trust is the only thing it cannot scale.</h1>
+        <h1 id="speaker-title" class="t-hero">AI commoditised competence. Trust is the only thing it cannot scale.</h1>
 
         <div class="speaker-hero__lede">
           <p class="t-body-lg">
@@ -883,7 +856,7 @@
         <details class="transcript">
           <summary>Read the speaker-reel transcript</summary>
           <div class="transcript__body">
-            <p>AI didn't just democratize competence, it commoditized it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot.</p>
+            <p>AI didn't just democratise competence, it commoditised it. So if you think about it, AI made it faster, but trust made it believable. The future CMO sees things differently. He sees trust as something that is not the output, but that is the input. It's so important that the trust is built beforehand, so that when something goes wrong, your audience, your customers give you the benefit of the doubt. In a world where everything can be generated, trust cannot.</p>
             <p>The question is, what do you want to be trusted for when everything else can be generated?</p>
           </div>
         </details>
@@ -893,7 +866,7 @@
     <!-- ===================== 2. TESTIMONIALS ===================== -->
     <section id="testimonials" class="section section--alt" aria-labelledby="testimonials-title">
       <div class="section__inner">
-        <div class="eyebrow-row"><span class="t-eyebrow">What organizers say</span></div>
+        <div class="eyebrow-row"><span class="t-eyebrow">What organisers say</span></div>
         <h2 id="testimonials-title" class="t-h2">Booked by the people who had to answer for the programme.</h2>
 
         <div class="quote-grid">
@@ -901,7 +874,7 @@
             <blockquote>Joeri's keynote on The CMO of the Future was insightful, inspiring and perfectly timed for today's marketing leaders.</blockquote>
             <figcaption class="quote-card__who">
               <span class="quote-card__name">Akram Saad</span>
-              Co-founder of Nexus, co-organizer of Marketing+ Conference, Cairo
+              Co-founder of Nexus, co-organiser of Marketing+ Conference, Cairo
             </figcaption>
           </figure>
 
@@ -932,7 +905,7 @@
 
         <div class="reading">
           <p class="t-body-lg">
-            AI did not just democratize competence. It commoditized it. Expertise can be generated, polish can be
+            AI did not just democratise competence. It commoditised it. Expertise can be generated, polish can be
             generated and a confident answer costs nothing to produce. What cannot be generated is the reason
             someone believes you. This talk is about designing for that reason on purpose.
           </p>
@@ -948,7 +921,7 @@
         </div>
 
         <ul class="takeaways">
-          <li>Why AI commoditizes competence, and why credibility becomes the scarce resource</li>
+          <li>Why AI commoditises competence, and why credibility becomes the scarce resource</li>
           <li>Why trust has to be designed as an input, not measured as an output</li>
           <li>What happens when an AI system says something wrong in your name</li>
           <li>How the CMO evolves from campaign manager into trust architect and Chief Value Officer</li>
@@ -1141,7 +1114,7 @@
         <div class="formats">
           <article class="format-card">
             <h3>Keynote</h3>
-            <p>The signature talk on why AI commoditized competence and why trust becomes marketing's new advantage. Thirty, forty-five or sixty minutes, tailored to the event theme and audience.</p>
+            <p>The signature talk on why AI commoditised competence and why trust becomes marketing's new advantage. Thirty, forty-five or sixty minutes, tailored to the event theme and audience.</p>
           </article>
           <article class="format-card">
             <h3>AI marketing workshops and masterclasses</h3>
@@ -1153,7 +1126,7 @@
           </article>
           <article class="format-card">
             <h3>Event podcast host</h3>
-            <p>I host and record <em>Web3 CMO Stories</em> from conferences and events, including recordings at Web Summit. A live-audience format can be developed with the organizer.</p>
+            <p>I host and record <em>Web3 CMO Stories</em> from conferences and events, including recordings at Web Summit. A live-audience format can be developed with the organiser.</p>
           </article>
         </div>
       </div>
@@ -1182,7 +1155,7 @@
           </div>
           <div class="facts__row">
             <div class="facts__key">Languages</div>
-            <div class="facts__val">Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions.</div>
+            <div class="facts__val">Keynotes and panel moderation in English, Dutch and French. I also understand German and Portuguese in conversation.</div>
           </div>
           <div class="facts__row">
             <div class="facts__key">Formats and length</div>
@@ -1235,14 +1208,14 @@
 
         <div class="bio-block">
           <div class="bio-block__label">Bio, medium, 100 words</div>
-          <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist who advises founders and executive teams on marketing leadership in AI-driven markets. He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to books by Mark Schaefer and Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, a podcast in the top five percent globally with more than 300 episodes. Belgium-born and based in Sintra, near Lisbon, he has spoken at TEDxChiado, Marketing+ Conference in Cairo, NEXT Summit in Valletta and BAM Marketing Congress in Brussels, in English, Dutch and French.</p>
+          <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist who advises founders and executive teams on marketing leadership in AI-driven markets. He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to books by Mark Schaefer and Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, <a href="https://www.listennotes.com/podcasts/web3-cmo-stories-joeri-billast-nJsU6Wd-R9P/" target="_blank" rel="noopener">ranked in the top 5% of podcasts globally by Listen Notes</a>, with more than 300 episodes. Belgium-born and based in Sintra, near Lisbon, he has spoken at TEDxChiado, Marketing+ Conference in Cairo, NEXT Summit in Valletta and BAM Marketing Congress in Brussels, in English, Dutch and French.</p>
         </div>
 
         <div class="bio-block">
           <div class="bio-block__label">Bio, long, 200 words</div>
           <p>Joeri Billast is a Fractional CMO and AI Visibility Strategist. He works with founders and executive teams on brand positioning and marketing leadership in markets where artificial intelligence increasingly mediates how customers find, evaluate and choose brands.</p>
-          <p>He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to <em>The Most Amazing Marketing Book Ever</em> by Mark Schaefer and <em>The Content Entrepreneur</em> by Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, a podcast in the top five percent globally with more than 300 episodes and guests including Gary Vaynerchuk and Chris Do. The show was nominated by the jury in three categories at the Belgian Podcast Awards 2025. He also created Sintra Synergies, a curated marketing and AI retreat in Portugal.</p>
-          <p>On stage his argument is consistent: artificial intelligence has commoditized competence, which makes trust the scarce resource and the only advantage that cannot be generated. He spoke at TEDxChiado in Lisbon in 2026, and has appeared at Marketing+ Conference in Cairo, NEXT Summit in Valletta, DGT Innovation in Oeiras and BAM Marketing Congress in Brussels. Belgium-born and based in Sintra, near Lisbon, he speaks in English, Dutch and French.</p>
+          <p>He is the author of <em>The Future CMO</em>, endorsed by Philip Kotler, and of <em>The 5K Challenge for Solopreneurs</em>, and a contributing author to <em>The Most Amazing Marketing Book Ever</em> by Mark Schaefer and <em>The Content Entrepreneur</em> by Joe Pulizzi. He hosts <em>Web3 CMO Stories</em>, <a href="https://www.listennotes.com/podcasts/web3-cmo-stories-joeri-billast-nJsU6Wd-R9P/" target="_blank" rel="noopener">ranked in the top 5% of podcasts globally by Listen Notes</a>, with more than 300 episodes and guests including Gary Vaynerchuk and Chris Do. The show was <a href="https://belgianpodcastawards.be/nominees/" target="_blank" rel="noopener">nominated in three categories at the Belgian Podcast Awards 2025: Business, Smartest Podcast and Branded Podcast</a>. He also created Sintra Synergies, a curated marketing and AI retreat in Portugal.</p>
+          <p>On stage his argument is consistent: artificial intelligence has commoditised competence, which makes trust the scarce resource and the only advantage that cannot be generated. He spoke at TEDxChiado in Lisbon in 2026, and has appeared at Marketing+ Conference in Cairo, NEXT Summit in Valletta, DGT Innovation in Oeiras and BAM Marketing Congress in Brussels. Belgium-born and based in Sintra, near Lisbon, he speaks in English, Dutch and French.</p>
         </div>
 
         <div class="bio-block">
@@ -1269,7 +1242,7 @@
     <section id="contact" class="section section--dark cta-dark" aria-labelledby="cta-title">
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Book Joeri</span></div>
-        <h2 id="cta-title" class="t-h2">I take on a limited number of stages each year and prepare each one properly.</h2>
+        <h2 id="cta-title" class="t-h2">Book a keynote</h2>
         <p>
           For a quick answer, include the event date, city, audience, desired format and indicative budget.
         </p>
@@ -1284,12 +1257,12 @@
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Frequently asked</span></div>
-        <h2 id="faq-title" class="t-h2">Questions from event organizers.</h2>
+        <h2 id="faq-title" class="t-h2">Questions from event organisers.</h2>
 
         <div class="faq-list">
           <article class="faq-item">
             <h3>What does Joeri Billast speak about?</h3>
-            <p>Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditized competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand and how organizations stay legible and citable in AI-mediated markets.</p>
+            <p>Marketing leadership in the age of artificial intelligence. His signature keynote argues that AI has commoditised competence, which makes trust the scarce resource and the real differentiator. It covers how the CMO role shifts from campaign manager to trust architect, what happens when AI misrepresents a brand and how organisations stay legible and citable in AI-mediated markets.</p>
           </article>
 
           <article class="faq-item">
@@ -1299,7 +1272,7 @@
 
           <article class="faq-item">
             <h3>In which languages does Joeri Billast speak?</h3>
-            <p>Keynotes in English, Dutch and French. German and Portuguese for conversational settings such as panels, interviews and informal discussions.</p>
+            <p>Keynotes and panel moderation in English, Dutch and French. He also understands German and Portuguese in conversation.</p>
           </article>
 
           <article class="faq-item">
@@ -1309,7 +1282,7 @@
 
           <article class="faq-item">
             <h3>Does Joeri Billast moderate panels and host podcasts at events?</h3>
-            <p>Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the <em>Web3 CMO Stories</em> podcast from conferences and events. A live-audience recording format can be developed with the organizer.</p>
+            <p>Yes. He moderates panels, particularly on Web3, AI and marketing, and hosts and records the <em>Web3 CMO Stories</em> podcast from conferences and events. A live-audience recording format can be developed with the organiser.</p>
           </article>
 
           <article class="faq-item">
@@ -1385,7 +1358,7 @@
     });
     list.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 720) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 860) setOpen(false); });
   })();
 </script>
 </body>

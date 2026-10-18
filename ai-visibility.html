@@ -103,6 +103,29 @@
   .nav__toggle[aria-expanded="true"] .nav__icon-close { display: block; }
   .nav__cta-short { display: none; }
 
+  @media (max-width: 860px) {
+    /* Compact bar from tablet width down: the full link row does not fit below 860px */
+    .nav__right { gap: 8px; }
+    .nav__toggle { display: inline-flex; }
+    .nav__right .btn { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
+    .nav__cta-long { display: none; }
+    .nav__cta-short { display: inline; }
+    .nav--js .nav__links {
+      position: absolute;
+      top: var(--nav-height); left: 0; right: 0;
+      flex-direction: column; align-items: stretch;
+      gap: 0;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-3);
+      padding: 2px var(--pad-x-desktop) 10px;
+    }
+    .nav--js .nav__links[data-open="false"] { display: none; }
+    .nav__links > li { border-bottom: 1px solid var(--color-border-light); }
+    .nav__links > li:last-child { border-bottom: 0; }
+    .nav__links a { display: block; padding: 15px 0; font-size: 15px; }
+  }
+
   @media (max-width: 720px) {
     .nav__inner { padding: 0 var(--pad-x-mobile); gap: 10px; }
     .wordmark { gap: 9px; }
@@ -200,6 +223,23 @@
     margin: 0 0 1.4em;
   }
   .article-body p:last-child { margin-bottom: 0; }
+  .article-quote {
+    margin: 0 0 1.5em;
+    padding: 4px 0 4px 18px;
+    border-left: 2px solid var(--color-purple);
+  }
+  .article-body .article-quote p {
+    margin: 0 0 10px;
+    font-style: italic;
+    color: var(--color-label);
+  }
+  .article-quote cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px; font-weight: 400; line-height: 1.5;
+    color: var(--color-muted);
+  }
+  .article-quote__source { display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 400; }
   .article-body em { font-style: italic; }
   .article-body a {
     color: var(--color-purple);
@@ -331,57 +371,7 @@
       "@type": "Person",
       "@id": "https://joeribillast.com/#person",
       "name": "Joeri Billast",
-      "givenName": "Joeri",
-      "familyName": "Billast",
-      "url": "https://joeribillast.com/",
-      "image": "https://joeribillast.com/assets/joeri-billast-portrait.png",
-      "jobTitle": "Fractional CMO and AI Visibility Strategist",
-      "description": "Belgium-born Fractional CMO and AI Visibility Strategist based in Sintra, near Lisbon. Author of The Future CMO, endorsed by Philip Kotler. Host of Web3 CMO Stories and founder of the Sintra Synergies retreat.",
-      "nationality": {
-        "@type": "Country",
-        "name": "Belgium"
-      },
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Sintra, Portugal"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Efficado"
-      },
-      "knowsAbout": [
-        "Marketing leadership",
-        "AI visibility",
-        "Generative engine optimization",
-        "Brand positioning",
-        "Fractional CMO",
-        "Trust in marketing"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/joeribillast",
-        "https://www.youtube.com/c/JoeriBillast",
-        "https://x.com/joeribillast",
-        "https://www.instagram.com/joeribillast",
-        "https://www.facebook.com/joeri.billast",
-        "https://pinterest.com/joeribillast",
-        "https://www.tiktok.com/@joeribillast",
-        "https://www.tiktok.com/@aiwithjoeri",
-        "https://www.cmo-stories.com",
-        "https://www.amazon.com/author/joeribillast",
-        "https://webdrie.net"
-      ],
-      "mainEntityOfPage": "https://joeribillast.com",
-      "subjectOf": [
-        {
-          "@id": "https://joeribillast.com/#tedx-talk"
-        },
-        {
-          "@id": "https://joeribillast.com/future-cmo#article"
-        },
-        {
-          "@id": "https://joeribillast.com/ai-visibility#article"
-        }
-      ]
+      "url": "https://joeribillast.com"
     },
     {
       "@type": "WebSite",
@@ -439,22 +429,22 @@
       },
       "mainEntityOfPage": "https://joeribillast.com/ai-visibility",
       "image": "https://joeribillast.com/assets/joeri-billast-speaking.jpg",
-      "datePublished": "2026-06-19",
-      "dateModified": "2026-06-19",
+      "datePublished": "2026-06-19T00:00:00+01:00",
+      "dateModified": "2026-10-18T00:00:00+01:00",
       "inLanguage": "en"
     },
     {
       "@type": "DefinedTerm",
       "@id": "https://joeribillast.com/ai-visibility#ai-visibility",
       "name": "AI Visibility",
-      "description": "The discipline of being recognized, understood and cited by AI systems when they answer questions in a category. It combines technical legibility, structured identity and verifiable trust so that AI tools name a brand rather than a competitor.",
+      "description": "The discipline of being recognised, understood and cited by AI systems when they answer questions in a category. It combines technical legibility, structured identity and verifiable trust so that AI tools name a brand rather than a competitor.",
       "inDefinedTermSet": "https://joeribillast.com/ai-visibility"
     },
     {
       "@type": "DefinedTerm",
       "@id": "https://joeribillast.com/ai-visibility#ai-share-of-voice",
       "name": "AI Share of Voice",
-      "description": "The consistency and authority that cause AI tools to reference a brand rather than a competitor when its category comes up. The AI-era successor to traditional share of voice. Coined by Joeri Billast.",
+      "description": "The consistency and authority that cause AI tools to reference a brand rather than a competitor when its category comes up. The AI-era successor to traditional share of voice.",
       "inDefinedTermSet": "https://joeribillast.com/ai-visibility"
     },
     {
@@ -466,7 +456,7 @@
           "name": "What is AI Visibility?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI Visibility is the discipline of being recognized, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The concept and its five-layer model were developed by Joeri Billast."
+            "text": "AI Visibility is the discipline of being recognised, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The five-layer model on this page is Joeri Billast's own framework for that work."
           }
         },
         {
@@ -474,7 +464,7 @@
           "name": "What is AI Share of Voice?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce. The term was coined by Joeri Billast."
+            "text": "AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce."
           }
         },
         {
@@ -482,7 +472,7 @@
           "name": "What are the five layers of AI Visibility?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The five layers are foundational SEO, Answer Engine Optimization, Generative Engine Optimization, AI Identity Optimization and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast."
+            "text": "The five layers are foundational SEO, Answer Engine Optimisation, Generative Engine Optimisation, AI Identity Optimisation and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast."
           }
         },
         {
@@ -490,7 +480,7 @@
           "name": "What is the difference between SEO and AI Visibility?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SEO optimizes to rank in a list of links a person clicks through. AI Visibility optimizes to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list."
+            "text": "SEO optimises to rank in a list of links a person clicks through. AI Visibility optimises to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list."
           }
         },
         {
@@ -523,14 +513,14 @@
       <div class="nav__right">
         <nav aria-label="Primary">
         <ul class="nav__links" id="primary-nav" data-open="false">
-          <li><a href="/#positioning">What I do</a></li>
-          <li><a href="/#perspective">Perspective</a></li>
+          <li><a href="/#what-i-do">What I do</a></li>
+          <li><a href="/#how-i-work">How I work</a></li>
           <li><a href="/speaking">Speaking</a></li>
-          <li><a href="/#credentials">Credentials</a></li>
+          <li><a href="/#writing">Writing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         </nav>
-        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Request an introduction</span><span class="nav__cta-short">Get in touch</span></a>
+        <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--ghost nav__cta-btn" target="_blank" rel="noopener"><span class="nav__cta-long">Discuss an engagement</span><span class="nav__cta-short">Get in touch</span></a>
         <button type="button" class="nav__toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" hidden>
           <svg class="nav__icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <svg class="nav__icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -558,14 +548,14 @@
 
         <p>A senior decision maker in your category opens ChatGPT, Claude or Perplexity and asks who they should hire, buy from or trust. The model gives a confident answer with three or four names. If your name is not one of them, you did not lose the deal. You were never in the room. There was no pitch, no shortlist, no rejection. You were simply invisible, and you will never see the conversation that decided it.</p>
 
-        <p>This is the shift that AI Visibility is about. Search used to send people to a list of links where you could compete for a click. AI tools increasingly skip the list and hand over an answer. <a href="https://www.gartner.com" target="_blank" rel="noopener">Gartner</a> expects that by 2028 around 70 percent of B2B research will begin with an AI tool rather than a search engine. When the answer replaces the list, being findable is no longer enough. You have to be the thing the model names.</p>
+        <p>This is the shift that AI Visibility is about. Search used to send people to a list of links where you could compete for a click. AI tools increasingly skip the list and hand over an answer. When the answer replaces the list, being findable is no longer enough. You have to be the thing the model names.</p>
 
         <h2>What AI Visibility actually is</h2>
-        <p>AI Visibility is the discipline of being recognized, understood and cited by AI systems when they answer questions in your category. It is not a single tactic. It is the combined result of how clearly machines can identify who you are, how reliably they can extract what you claim and how much they trust you enough to repeat it.</p>
+        <p>AI Visibility is the discipline of being recognised, understood and cited by AI systems when they answer questions in your category. It is not a single tactic. It is the combined result of how clearly machines can identify who you are, how reliably they can extract what you claim and how much they trust you enough to repeat it.</p>
 
         <p>Most people reduce this to one thing they already understand, and that is where they go wrong. The SEO specialist hears "rank higher." The PR person hears "get more mentions." The content team hears "publish more." All three are partly right and completely insufficient, because AI Visibility is not a louder version of any single channel. It is a stack, and a brand can be strong on one layer and invisible because it is absent on another.</p>
 
-        <p>I call the outcome you are actually chasing your AI Share of Voice. It is the consistency and authority that cause AI tools to reference you rather than a competitor when the category comes up. Share of voice used to be a media-buying term. In the age of generative answers it has become the thing that decides whether you exist in the only conversation that now matters, the one between a buyer and a machine.</p>
+        <p>The outcome you are actually chasing is your AI Share of Voice. It is the consistency and authority that cause AI tools to reference you rather than a competitor when the category comes up. Share of voice used to be a media-buying term. In the age of generative answers it has become the thing that decides whether you exist in the only conversation that now matters, the one between a buyer and a machine.</p>
 
         <h2>The five layers of AI Visibility</h2>
         <p>I structure the discipline as five layers. They build on each other. Most brands invest heavily in the first, dabble in the second and have never heard of the rest. That is the gap, and it is also the opportunity, because the brands that work the higher layers face almost no competition there yet.</p>
@@ -573,17 +563,17 @@
         <h3>Layer one: foundational SEO</h3>
         <p>The base layer has not disappeared. AI systems are trained on and retrieve from the open web, and a page that classic search cannot reach is a page the models cannot learn from either. Crawlability, clean structure, fast pages, sensible internal linking. This is table stakes, and the painful irony I see often is a beautiful brand site that quietly blocks the very AI crawlers it needs. Before anything clever, make sure the machines can actually read you.</p>
 
-        <h3>Layer two: Answer Engine Optimization, AEO</h3>
+        <h3>Layer two: Answer Engine Optimisation, AEO</h3>
         <p>Answer engines do not reward the same things a blue-link search did. They reward content that is easy to lift and reuse as an answer. That means declarative writing, where a sentence states a fact cleanly rather than burying it in throat-clearing. It means question-shaped structure, real FAQ formats, clear headings that match how people ask. It means putting the answer first and the context after. If a model has to work to extract your point, it will quote a competitor who made it easier.</p>
 
-        <h3>Layer three: Generative Engine Optimization, GEO</h3>
+        <h3>Layer three: Generative Engine Optimisation, GEO</h3>
         <p>This is where most brands fall off entirely. GEO is about making yourself legible as an entity, not just as a set of pages. It is structured data and schema, a Person or Organization entity that is defined once and referenced consistently. It is a sameAs array that ties your name to your LinkedIn, your podcast, your books, your other profiles, so a model can resolve that all of these are the same you. It is citation-worthiness, being the kind of source a model is willing to stand behind. If you want <a href="https://webdrie.net/seo-ai-seo-aeo-geo-aio-what-marketers-really-need-to-know-now/" target="_blank" rel="noopener">the technical definitions of SEO, AEO, GEO and AIO</a> laid out in full, I have written those separately. Here the point is simpler. GEO is how you stop being a stranger to the machine and become a known entity it can place.</p>
 
-        <h3>Layer four: AI Identity Optimization, AIO</h3>
-        <p>The fourth layer is the one almost nobody manages on purpose, and it is the most important for a personal or founder brand. AIO is about the definition the models themselves hold of you. Ask a model who you are and it will answer in a sentence or two. Someone wrote the inputs that produced that sentence, and right now for most brands it is assembled by accident from whatever the web happened to say. AIO is the deliberate work of shaping that answer. It is having a canonical, consistent description of who you are and what you stand for, published on a source the models trust, so that when they describe you they describe you correctly. This is why a personal entity hub matters, and it is part of why I am building <a href="https://joeri.ai" target="_blank" rel="noopener">joeri.ai</a>, so that my own thinking is something a model can consult directly.</p>
+        <h3>Layer four: AI Identity Optimisation, AIO</h3>
+        <p>The fourth layer is the one almost nobody manages on purpose, and it is the most important for a personal or founder brand. AIO is about the definition the models themselves hold of you. Ask a model who you are and it will answer in a sentence or two. Someone wrote the inputs that produced that sentence, and right now for most brands it is assembled by accident from whatever the web happened to say. AIO is the deliberate work of shaping that answer. It is having a canonical, consistent description of who you are and what you stand for, published on a source the models trust, so that when they describe you they describe you correctly. This is why a personal entity hub matters, and it is part of why I am building joeri.ai, so that my own thinking is something a model can consult directly.</p>
 
         <h3>Layer five: trust as the override</h3>
-        <p>The top layer is the one that cannot be engineered, and it is the one that decides everything below it. Models are increasingly tuned to prefer sources they can trust, because a confident wrong answer is their worst failure. Trust signals a model can verify, named clients, real endorsements, consistent claims across independent sources, a track record that checks out, are what move you from a source that might be cited to one that reliably is. This is where AI Visibility meets the deeper argument, that <a href="/future-cmo">trust is the only moat AI cannot scale</a>. You can optimize the first four layers with effort and craft. The fifth you can only earn. That is also why it is the most defensible, because a competitor can copy your schema in an afternoon and cannot copy your reputation at all.</p>
+        <p>The top layer is the one that cannot be engineered, and it is the one that decides everything below it. Models are increasingly tuned to prefer sources they can trust, because a confident wrong answer is their worst failure. Trust signals a model can verify, named clients, real endorsements, consistent claims across independent sources, a track record that checks out, are what move you from a source that might be cited to one that reliably is. This is where AI Visibility meets the deeper argument, that <a href="/future-cmo">trust is the only moat AI cannot scale</a>. You can optimise the first four layers with effort and craft. The fifth you can only earn. That is also why it is the most defensible, because a competitor can copy your schema in an afternoon and cannot copy your reputation at all.</p>
 
         <h2>The diagnostic: five questions to find your gap</h2>
         <p>You can locate your own weakest layer in a few minutes. Be honest, because the machines already are.</p>
@@ -596,10 +586,18 @@
           <li>If you ask a model to describe you in two sentences, is the description accurate and the one you would choose. This is layer four, and the answer is usually revealing.</li>
         </ol>
 
+        <p>If you want an outside view of your answers to these five questions, that is what my <a href="/#how-i-work">AI Visibility Diagnostic</a> is for. I test how AI systems such as ChatGPT, Perplexity, Claude and Google's AI answers describe and compare your company across the questions your buyers ask. I review the citations and public sources that appear in those answers and the trust signals that are missing, and you leave with prioritised actions. AI systems do not reveal everything they draw on, so the diagnostic works with what can be observed: the answers, their citations and your public record.</p>
+
+        <blockquote class="article-quote">
+          <p>We uncovered a number of quick wins for how I publish my podcast, structure data, and position my business in a way that makes sense for this new world of AI. Highly practical and highly recommended.</p>
+          <cite>Matt Wilkinson, PhD, CEO, Strivenn</cite>
+          <a class="article-quote__source" href="https://www.linkedin.com/in/joeribillast" target="_blank" rel="noopener">Recommendations on LinkedIn</a>
+        </blockquote>
+
         <p>The layer where you stumble is where your next month of work should go. For most brands it is not layer one, where they have spent years. It is layers three and four, where they have spent nothing.</p>
 
         <h2>Why I think about it this way</h2>
-        <p>I did not arrive at this from theory. I run an AI Visibility practice, I host <a href="https://www.cmo-stories.com" target="_blank" rel="noopener">Web3 CMO Stories</a> and I built my own brand architecture as a working example of the discipline, a personal entity hub, a content engine and a personal AI agent at <a href="https://joeri.ai" target="_blank" rel="noopener">joeri.ai</a>. The five layers are how I explain to a CMO over dinner what most teams are getting wrong, which is that they keep making the bottom layer louder when their real problem lives at the top.</p>
+        <p>I did not arrive at this from theory. I run an AI Visibility practice, I host <a href="https://www.cmo-stories.com" target="_blank" rel="noopener">Web3 CMO Stories</a> and I built my own brand architecture as a working example of the discipline, a personal entity hub, a content engine and a personal AI agent at joeri.ai. The five layers are how I explain to a CMO over dinner what most teams are getting wrong, which is that they keep making the bottom layer louder when their real problem lives at the top.</p>
 
         <p>AI Visibility is the operational half of a larger thesis. The strategic half is simpler. As AI makes content infinite, the brands that get named are the ones the machines can identify and trust, and trust is the only moat AI cannot scale. Get the layers right and you become legible to the machine. Earn the trust and you become the answer.</p>
 
@@ -615,22 +613,22 @@
         <div class="faq-list">
           <article class="faq-item">
             <h3>What is AI Visibility?</h3>
-            <p>AI Visibility is the discipline of being recognized, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The concept and its five-layer model were developed by Joeri Billast.</p>
+            <p>AI Visibility is the discipline of being recognised, understood and cited by AI systems such as ChatGPT, Claude, Perplexity and Google's AI answers when they respond to questions in your category. It combines technical legibility, structured identity and verifiable trust so that AI tools name your brand rather than a competitor. The five-layer model on this page is Joeri Billast's own framework for that work.</p>
           </article>
 
           <article class="faq-item">
             <h3>What is AI Share of Voice?</h3>
-            <p>AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce. The term was coined by Joeri Billast.</p>
+            <p>AI Share of Voice is the consistency and authority that cause AI tools to reference your brand rather than a competitor when your category comes up. It is the AI-era successor to traditional share of voice, and it is the outcome AI Visibility work is designed to produce.</p>
           </article>
 
           <article class="faq-item">
             <h3>What are the five layers of AI Visibility?</h3>
-            <p>The five layers are foundational SEO, Answer Engine Optimization, Generative Engine Optimization, AI Identity Optimization and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast.</p>
+            <p>The five layers are foundational SEO, Answer Engine Optimisation, Generative Engine Optimisation, AI Identity Optimisation and trust as the override. Each builds on the one below. Most brands invest heavily in the first layer and neglect the upper layers, which is where the real competitive gap sits. The model was developed by Joeri Billast.</p>
           </article>
 
           <article class="faq-item">
             <h3>What is the difference between SEO and AI Visibility?</h3>
-            <p>SEO optimizes to rank in a list of links a person clicks through. AI Visibility optimizes to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list.</p>
+            <p>SEO optimises to rank in a list of links a person clicks through. AI Visibility optimises to be named directly in the answer an AI tool gives, often with no list and no click. SEO is the foundational layer of AI Visibility, but being findable is no longer enough when the answer replaces the list.</p>
           </article>
 
           <article class="faq-item">
@@ -646,9 +644,9 @@
       <div class="section__inner">
         <div class="eyebrow-row"><span class="t-eyebrow">Work with Joeri</span></div>
         <h2 id="cta-title" class="t-h2">If you want to be the brand AI tools cite in your category, let's talk.</h2>
-        <p>For executive teams considering an AI Visibility audit, a Fractional CMO engagement or a keynote.</p>
+        <p>For executive teams considering an AI Visibility Diagnostic, a Fractional CMO engagement or a keynote.</p>
         <div class="cta-dark__buttons">
-          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Request an introduction</a>
+          <a href="https://myformflow.io/efficado/contact-joeri" class="btn btn--primary" target="_blank" rel="noopener">Discuss a strategic engagement</a>
           <a href="/future-cmo" class="btn btn--ghost-dark">Read the strategic argument</a>
         </div>
       </div>
@@ -700,7 +698,7 @@
     });
     list.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 720) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 860) setOpen(false); });
   })();
 </script>
 </body>
